@@ -10,7 +10,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { navigation } from "@/data"
-import Image from "next/image"
+
 import Link from "next/link"
 // import { useUser } from "@clerk/nextjs";
 
@@ -47,7 +47,8 @@ export function SheetDemo() {
         <SheetHeader>
           <SheetTitle>
             <Link href="/">
-            <Image src="/logos/Logo.png" width={100} height={40} alt="logo"/>
+            {/* <Image src="/logos/Logo.png" width={100} height={40} alt="logo"/> */}
+            WORLDG3NIUS
             </Link>
             </SheetTitle>
           <SheetDescription>
@@ -64,18 +65,6 @@ export function SheetDemo() {
           )
         )
         }
-         {/* {
-                    isSignedIn && (
-                            <>
-                            <a className="w-[6rem]" href='/mytours'>
-                             <li className="navitems flex items-center hover:border-b-2 hover:border-[#e8bd3b] text-[#317670]" >My tours</li>
-                            </a>
-                            <a className="w-[6rem]" href='history'>
-                                    <li className="navitems flex items-center  hover:border-b-2 hover:border-[#e8bd3b] text-[#317670]" >History</li>
-                            </a>
-                            </>
-                        )
-                } */}
         
          </ul>
         </div>
