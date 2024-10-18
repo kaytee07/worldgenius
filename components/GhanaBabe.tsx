@@ -1,17 +1,29 @@
 import { ghanaBabe } from '@/data'
 import React from 'react'
+import { Staatliches } from 'next/font/google';
+
+
+const staatliches = Staatliches({
+  subsets: ['latin'], 
+  weight: ['400'],
+});
+// const bebasNeue = Bebas_Neue({
+//   subsets: ['latin'],
+//   weight: ['400'], // Bebas Neue typically has a single weight
+// });
 
 const GhanaBabe = () => {
   return (
     <div className="flex justify-center items-center flex-col mb-6">
-    <div className="flex justify-center py-6">
-        <h1 className='text-slate-800 text-xl font-semibold'>MOST SHOPPED ITEMS</h1>
+    <div>
+    <div className={`flex  py-6 ${staatliches.className}`}>
+        <h1 className='text-black text-4xl font-semibold tracking-wide'>MOST SHOPPED ITEMS</h1>
     </div>
-    <ul className='flex max-sm:flex-col max-sm:items-center gap-4 md:w-[66rem] justify-center'>
+    <ul className='grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw]'>
     {
         ghanaBabe.slice(0, 4).map((item,index)=> (
         <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200 md:w-72">
-            <div className="relative h-96 overflow-hidden  bg-clip-border">
+            <div className="relative h-96 overflow-hidden bg-clip-border">
                 <img
                 src={`${item.img}`}
                 alt="card-image"
@@ -35,6 +47,7 @@ const GhanaBabe = () => {
         ))
     }
     </ul>
+    </div>
     </div>
   )
 }

@@ -1,22 +1,11 @@
-import { ghanaBabe } from '@/data'
+import { collection } from '@/data'
 import React from 'react'
-import { Staatliches } from 'next/font/google';
 
-const staatliches = Staatliches({
-  subsets: ['latin'], 
-  weight: ['400'],
-});
-
-const NewArrivals = () => {
+const Allitems = () => {
   return (
-    <div className="flex justify-center items-center flex-col mb-6">
-    <div>
-    <div className={`flex  py-6 ${staatliches.className}`}>
-        <h1 className='text-black text-4xl font-semibold tracking-wide'>NEW ARRIVALS</h1>
-    </div>
-    <ul className='grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw]'>
+      <ul className='grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw]'>
     {
-        ghanaBabe.slice(0, 4).map((item,index)=> (
+        collection.map((item,index)=> (
         <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200 md:w-72">
             <div className="relative h-96 overflow-hidden bg-clip-border">
                 <img
@@ -34,17 +23,17 @@ const NewArrivals = () => {
                     ₵{item.price}
                 </p>
                 </div>
+                <a href={`/shop/${item.name.replace(/\s+/g, '').toLowerCase()}`}>
                 <button className="rounded-md w-full mt-6 bg-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
                 Add to Cart
                 </button>
+                </a>
             </div>
         </div>
         ))
     }
     </ul>
-    </div>
-    </div>
   )
 }
 
-export default NewArrivals
+export default Allitems
