@@ -95,19 +95,20 @@ export const collection = [
     },
     {
         name: "ladybird turtle neck",
-        price: "120",
+        price: "120.00",
         img: "/img/fashion8.avif"
     },
     {
         name: "ladybird turtle neck",
-        price: "120",
+        price: "120.00",
         img: "/img/fashion9.avif"
     },    
 ]
 export const products = {
     vlweavedshirts:{
+        id:4,
         name: "vl weaved shirts",
-        price: "75",
+        price: 75.00,
         img: "/img/shirt3.avif",
         sizes: [
             {
@@ -148,8 +149,9 @@ export const products = {
         otherImages: []
     },
     ghanababetops:{
+        id: 0,
         name: "Ghana Babe Tops",
-        price: "75",
+        price: 75.00,
         img: "/img/shirt2.avif",
         sizes: [
             {
@@ -190,8 +192,9 @@ export const products = {
         otherImages: []
     },
     topturnroundneck:{
+        id: 1,
         name: "top turn round neck",
-        price: "75",
+        price: 75.00,
         img: "/img/shirt1.avif",
         sizes: [
             {
@@ -236,8 +239,9 @@ export const products = {
         otherImages: []
     },
     ladybirdturtleneck:{
+        id: 2,
         name: "Lady Bird Turtle Neck",
-        price: "75",
+        price: 75.00,
         img: "/img/shirt3.avif",
         sizes: [
             {

@@ -1,14 +1,39 @@
 "use client"
 
-import React from 'react' 
+import React, { useState, useEffect } from 'react' 
 import { SheetDemo } from './Sidebar'
+import { SheetDemoCart } from './Cart'
 import { navigation } from '@/data'
 
 // import { ClerkLoaded, UserButton} from '@clerk/nextjs'
 // import { useUser } from "@clerk/nextjs";
+interface Product {
+    key: string;
+    originalPrice: number;
+    id: number;
+    name: string;
+    price: number;
+    color: string;
+    size: string;
+    quantity: number;
+}
+
+// Define the structure of the cart data (Products object)
+interface CartItems {
+    [key: string]: Product;
+}
+
+
 
 const Navbar = () => {
+    const [cartItems, setCartItems] = useState<CartItems>({});
     // const { isSignedIn, user } = useUser();
+
+    useEffect(() => {
+        const storedCart = JSON.parse(localStorage.getItem('cart') || '{}');
+        setCartItems(storedCart);
+    }, []);
+
   return (
     <header className='flex flex-row justify-between items-center py-3 px-9'>
         <div className='flex flex-row justify-between items-center w-full'>
@@ -28,13 +53,13 @@ const Navbar = () => {
                     </a>
                 )
                 )}
-                <li className=" relative">
-                    <div className='h-[14px] w-[14px] left-[14px] bottom-[14px] flex justify-center items-center rounded-md bg-black text-white absolute'>
-                        0
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
-                </li>      
+            
+                      <SheetDemoCart data={cartItems} />
+                  
             </ul>
+            <div>
+
+            </div>
                 {/* <UserButton/> */}
              <li className="md:hidden flex items-center relative">
                 <div className='h-[14px] w-[14px] left-[14px] bottom-[10px] flex justify-center items-center rounded-md bg-black text-white absolute'>
@@ -43,7 +68,7 @@ const Navbar = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
              </li>
             <div className="md:hidden flex items-center">
-                <SheetDemo/>
+                <SheetDemo />
             </div>
             
         </nav>
