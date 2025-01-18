@@ -42,8 +42,9 @@ interface OrderObject {
 
 
 
+
 export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
-    
+    const [ cartItems, setCartItems] = useState<ItemObject[]>([]) 
     const [cart, setCart] = useState<{[key: string]: ItemObject}>({})
     const [email, setEmail] = useState<string>('');
     const [number, setNumber] = useState<string>('');
@@ -52,45 +53,94 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
 
     useEffect(() => {
         setCart(data)
+       
+       
 
     }, [data])
 
-    const handleIncreaseQuantity = (itemId: number, itemSize: string, itemColor: string, itemName: string) => {
-        const updatedCart = {...cart};
-        const itemKey = `${ itemId }-${ itemSize }-${ itemColor }`
-        const product = updatedCart[itemName];
-    
-        if (product["key"] === itemKey){
-            product.quantity++
-            product.price = product.originalPrice * product.quantity
-        } else{
-            console.log("not here");
-            return;
-        }
-        console.log(product.quantity);
-        setCart(updatedCart);
-
-        localStorage.setItem('cart', JSON.stringify(updatedCart))
-    }
-
-    const handleDecreaseQuantity = (itemId: number, itemSize: string, itemColor: string, itemName: string) => {
-        const updatedCart = { ...cart };
-        const itemKey = `${itemId}-${itemSize}-${itemColor}`
-        const product = updatedCart[itemName];
+    useEffect(() => {
+        const itemsArray =  Object.keys(cart).map((key) => cart[key]);
+        setCartItems(itemsArray);
         
+    }, [cart])
 
-        if (product["key"] === itemKey && product.quantity > 1) {
-            product.quantity--
-            product.price = product.originalPrice * product.quantity
-        } else {
-            console.log("not here");
-            return;
+    const handleRemoveItem = (itemKey: string) => {
+        // Make a shallow copy of the cart to avoid mutating state directly
+        let updatedCart = {...cart};
+    
+        
+        const itemIndex = cartItems.findIndex(item => 
+            `${item.id}-${item.size}-${item.color}` === itemKey
+        );
+    
+        if (itemIndex === -1) {
+            console.log("Item not found in cart");
+            return; 
         }
-        console.log(product.quantity);
+    
+         cartItems.splice(itemIndex, 1);
+    
+        updatedCart = {};
+        cartItems.map((item) => {
+            updatedCart[item.key] = item;
+        })
         setCart(updatedCart);
+    
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+    };
+    
 
-        localStorage.setItem('cart', JSON.stringify(updatedCart))
-    }
+    const handleIncreaseQuantity = (itemKey: string) => {
+       const updatedCart = {...cart}
+       console.log(itemKey)
+    
+        const itemIndex = cartItems.findIndex(item => 
+            `${item.id}-${item.size}-${item.color}` === itemKey
+        );
+    
+        if (itemIndex === -1) {
+            console.log("Item not found in cart");
+            return; 
+        }
+    
+        const product = cartItems[itemIndex];
+        product.quantity++;
+        product.price = product.originalPrice * product.quantity;
+    
+        console.log(`Updated quantity: ${product.quantity}`);
+    
+        updatedCart[itemKey].quantity = product.quantity;
+        setCart(updatedCart);
+    
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+    };
+    
+
+    const handleDecreaseQuantity = (itemKey: string) => {
+        const updatedCart = {...cart}
+        console.log(itemKey)
+     
+         const itemIndex = cartItems.findIndex(item => 
+             `${item.id}-${item.size}-${item.color}` === itemKey
+         );
+     
+         if (itemIndex === -1) {
+             console.log("Item not found in cart");
+             return; 
+         }
+     
+         const product = cartItems[itemIndex];
+         product.quantity--;
+         product.price = product.originalPrice * product.quantity;
+     
+         console.log(`Updated quantity: ${product.quantity}`);
+     
+         updatedCart[itemKey].quantity = product.quantity;
+         setCart(updatedCart);
+     
+         
+         localStorage.setItem('cart', JSON.stringify(updatedCart));
+     };
     
     const checkout = () => {
        
@@ -124,7 +174,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
             <SheetTrigger asChild>
                 <li className="relative">
                     <div className='h-[14px] w-[14px] left-[14px] bottom-[14px]  flex justify-center items-center rounded-md bg-black text-white absolute'>
-                        {Object.keys(cart).length}
+                        {cartItems.length}
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1" /><circle cx="19" cy="21" r="1" /><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /></svg>
                 </li>
@@ -146,23 +196,29 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
                 <div className="gap-4 py-4 flex flex-col">
                     <ul className="flex flex-col w-full gap-10 justify-around">
                          {
-                            Object.keys(cart).map((items) => (
+                            cartItems.length && cartItems.map((items, index) => (
                                 
-                                    <li key={data[items].id} className="navitems text-[#317670] pb-5 w-full" >
+                                    <li key={index} className="navitems text-[#317670] pb-5 w-full" >
                                         <div className="flex justify-evenly">
                                             <div className="img w-20">
-                                                <img src="" alt="" />
+                                                <img src={items.img} alt="img" />
                                             </div>
                                             <div className="info w-40 flex flex-col">
-                                            <p>{data[items].name}</p>
-                                            <p>{data[items].price}</p>
+                                            <p>{items.name}</p>
+                                            <p>{items.price}</p>
+                                            <div className="flex gap-6">
+                                                <p>
+                                                    {items.color}
+                                                </p>
+                                                <p> {items.size}</p>
+                                            </div>
                                             <div className="flex w-full gap-9">
-                                                <p className="cursor" onClick={() => { handleIncreaseQuantity(data[items].id, data[items].size, data[items].color, data[items].name)}}>+</p>
-                                                <p>{data[items].quantity}</p>
-                                                <p className="cursor" onClick={() => { handleDecreaseQuantity(data[items].id, data[items].size, data[items].color, data[items].name) }}>-</p>
+                                                <p className="cursor" onClick={() => { handleIncreaseQuantity(items.key)}}>+</p>
+                                                <p>{items.quantity}</p>
+                                                <p className="cursor" onClick={() => { handleDecreaseQuantity(items.key) }}>-</p>
                                             </div>
                                             </div>
-                                            <div className="remove">
+                                        <div onClick={() => { handleRemoveItem(items.key)}} className="remove">
                                             <Trash />
                                             </div>
                                         </div>

@@ -14,9 +14,9 @@ export const navigation = [
 ]
 export const ghanaBabe = [
     {
-        name: "Ghana Babe Tops",
-        price: "140",
-        img: "/img/shirt3.avif"
+        name: "ghana babe croptop",
+        price: "200",
+        img: "/img/ghanababe.jpg"
     },
     {
         name: "Ghana Babe Tops",
@@ -24,14 +24,14 @@ export const ghanaBabe = [
         img: "/img/shirt2.avif"
     },
     {
-        name: "Ghana Babe Tops",
+        name: "top turn round neck",
         price: "120",
         img: "/img/shirt1.avif"
     },
      {
-        name: "Ghana Babe Tops",
+        name: "Lady Bird Turtle Neck",
         price: "120",
-        img: "/img/shirt1.avif"
+        img: "/img/fashion1.avif"
     },        
 ]
 
@@ -105,97 +105,95 @@ export const collection = [
     },    
 ]
 export const products = {
-    vlweavedshirts:{
+    ghanababecroptop:{
         id:4,
-        name: "vl weaved shirts",
-        price: 75.00,
-        img: "/img/shirt3.avif",
+        name: "Ghana babe croptop",
+        price: 200.00,
+        img: "/img/ghanababe.jpg",
         sizes: [
             {
-                name: "M",
+                name: "S",
                 quantity: 90
             },
             {
-                name: "L",
+                name: "M",
                 quantity: 30
             },
             {
                 name: "XL",
                 quantity: 55
+            },
+            {
+                name: "XXL",
+                quantity: 55
+            },
+             {
+                name: "XXXL",
+                quantity: 55
             }
         ],
         colors:[
             {
-                name: "Plum",
-                code: "#88498F"
+                name: "White",
+                code: "FFFFF"
             },
-            {
-                name: "Moonstone",
-                code: "#779FA1"
-            },
-            {
-                name: "Dub",
-                code: "#E0CBA8"
-            },
-            {
-                name: "Tomato",
-                code: "#FF6542"
-            },{
-                name: "Eggplant",
-                code: "#564154"
-            }
         ],
         quantity: 7,
         otherImages: []
     },
-    ghanababetops:{
+    gtashirt:{
         id: 0,
-        name: "Ghana Babe Tops",
-        price: 75.00,
-        img: "/img/shirt2.avif",
+        name: "GTA shirt",
+        price: 250.00,
+        img: "/img/gtacream.jpg",
         sizes: [
-            {
-                name: "M",
+                       {
+                name: "S",
                 quantity: 90
             },
             {
-                name: "L",
+                name: "M",
                 quantity: 30
             },
             {
                 name: "XL",
                 quantity: 55
+            },
+            {
+                name: "XXL",
+                quantity: 55
+            },
+             {
+                name: "XXXL",
+                quantity: 55
             }
         ],
         colors:[
             {
-                name: "Plum",
-                code: "#88498F"
+                name: "Cream",
+                code: "CEBA7C"
             },
             {
-                name: "Moonstone",
-                code: "#779FA1"
+                name: "Grey",
+                code: "3A3A3A"
             },
             {
-                name: "Dub",
-                code: "#E0CBA8"
+                name: "White",
+                code: "FFFFFF"
             },
             {
-                name: "Tomato",
-                code: "#FF6542"
-            },{
-                name: "Eggplant",
-                code: "#564154"
+                name: "Black",
+                code: "000000"
             }
         ],
-        quantity: 7,
+        quantity: 8,
         otherImages: []
     },
-    topturnroundneck:{
+    dndtrackercap:{
         id: 1,
-        name: "top turn round neck",
-        price: 75.00,
-        img: "/img/shirt1.avif",
+        name: "DND tracker cap",
+        price: 100.00,
+        img: "/img/dndcap.jpg",
         sizes: [
             {
                 name: "S",
@@ -216,37 +214,27 @@ export const products = {
         ],
         colors:[
             {
-                name: "Plum",
-                code: "#88498F"
+                name: "Red and black",
+                code: "e71016"
             },
-            {
-                name: "Moonstone",
-                code: "#779FA1"
-            },
-            {
-                name: "Dub",
-                code: "#E0CBA8"
-            },
-            {
-                name: "Tomato",
-                code: "#FF6542"
-            },{
-                name: "Eggplant",
-                code: "#564154"
-            }
+           
         ],
         quantity: 7,
         otherImages: []
     },
-    ladybirdturtleneck:{
+    ghanaboysshirt:{
         id: 2,
-        name: "Lady Bird Turtle Neck",
-        price: 75.00,
-        img: "/img/shirt3.avif",
+        name: "Ghana Boys Shirt",
+        price: 200.00,
+        img: "/img/ghanaboysblack.jpg",
         sizes: [
+                       {
+                name: "S",
+                quantity: 90
+            },
             {
                 name: "M",
-                quantity: 90
+                quantity: 30
             },
             {
                 name: "L",
@@ -255,28 +243,71 @@ export const products = {
             {
                 name: "XL",
                 quantity: 55
+            },
+            {
+                name: "XXL",
+                quantity: 55
+            },
+             {
+                name: "XXXL",
+                quantity: 55
+            },
+             {
+                name: "4XL",
+                quantity: 55
             }
         ],
         colors:[
             {
-                name: "Plum",
-                code: "#88498F"
+                name: "Black",
+                code: "88498F"
+            },
+           
+        ],
+        quantity: 7,
+        otherImages: []
+    },
+    accrawedey:{
+        id: 2,
+        name: "Ghana Boys Shirt",
+        price: 200.00,
+        img: "/img/419front.jpg",
+        sizes: [
+                       {
+                name: "S",
+                quantity: 90
             },
             {
-                name: "Moonstone",
-                code: "#779FA1"
+                name: "M",
+                quantity: 30
             },
             {
-                name: "Dub",
-                code: "#E0CBA8"
+                name: "L",
+                quantity: 30
             },
             {
-                name: "Tomato",
-                code: "#FF6542"
-            },{
-                name: "Eggplant",
-                code: "#564154"
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "XXL",
+                quantity: 55
+            },
+             {
+                name: "XXXL",
+                quantity: 55
+            },
+             {
+                name: "4XL",
+                quantity: 55
             }
+        ],
+        colors:[
+            {
+                name: "Black",
+                code: "88498F"
+            },
+           
         ],
         quantity: 7,
         otherImages: []

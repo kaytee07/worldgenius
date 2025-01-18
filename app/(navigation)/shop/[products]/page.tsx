@@ -2,6 +2,7 @@
 import { products } from '@/data'
 import Image from 'next/image'
 import React, {useState, useEffect} from 'react'
+import { useRouter } from 'next/navigation';
 import { Oswald } from 'next/font/google';
 
 
@@ -22,6 +23,7 @@ const oswald = Oswald({
 type Item = {
     key: string,
     id: number,
+    img: string,
     name: string,
     originalPrice: number,
     price: number,
@@ -31,12 +33,23 @@ type Item = {
 }
 
 const Products = ({params}:{params: string}) => {
+    const [ color, selectColor] = useState("");
+    const [size, selectSize] = useState("");
     const Products = products[params.products as keyof typeof products]; 
-    const [tempItem, setTempItem] = useState<Item>({id: 0, name: '', originalPrice: 0, price: 0,  color: '', size: '', quantity: 1, key: ''});
+    const [tempItem, setTempItem] = useState<Item>({id: 0, img: '', name: '', originalPrice: 0, price: 0,  color: '', size: '', quantity: 1, key: ''});
+    const router = useRouter();
 
-    function handleAttributeChange(key:string, value:string | number ){
+
+    function handleAttributeChange(key:string, value:string){
+        if (key === "color") {
+            selectColor(value);
+            console.log(color, value)
+        };
+        if (key === "size") {
+            selectSize(value)
+            console.log(size, value)
+        };
         setTempItem((prevItem) => ({...prevItem, [key]: value}));
-        console.log(tempItem)
     }
 
 
@@ -44,25 +57,28 @@ const Products = ({params}:{params: string}) => {
  
 
     function addToCart() {
-        console.log("dog")
         const item = tempItem;
+        if (!item.size) return alert("select a size");
+        if (!item.color) return alert("select a color");
         const itemKey = `${item.id}-${item.size}-${item.color}`; 
+        console.log(itemKey)
         
         const cart: Record<string, Item> = JSON.parse(localStorage.getItem('cart') || '{}');
-        console.log(cart)
+        
 
         // Find the existing item index in the cart
-        const existingItemIndex: boolean = cart[item.name] && cart[item.name].id === item.id && cart[item.name].size === item.size && cart[item.name].color === item.color
-
+        
+        const existingItemIndex: boolean = cart[itemKey] && cart[itemKey].key === itemKey
+        console.log(itemKey)
         // If item exists in the cart, update its quantity, else add it
-     
+        
         if (existingItemIndex) {
-            cart[item.name].quantity!++
+            alert("item already in cart");
+            return    
         } else {
-            console.log(existingItemIndex);
-            console.log(item)
+            item['img'] = Products.img;
             item['key'] = itemKey;
-            cart[`${item.name}`] = item;
+            cart[`${itemKey}`] = item;
             // cart.push(item);
         }
 
@@ -70,6 +86,7 @@ const Products = ({params}:{params: string}) => {
         localStorage.setItem('cart', JSON.stringify(cart));
 
         console.log('Updated Cart:', cart);
+        window.location.reload()
     }
 
   
@@ -99,7 +116,8 @@ const Products = ({params}:{params: string}) => {
                           <div className="allSizes flex gap-5">
                               {
                                   Products.sizes.map((item, index) => (
-                                      <button onClick={() => handleAttributeChange('size', item.name) } className={`${oswald.className} w-20 h-10 rounded-sm border-[1px] border-[#e6e6e6]`} key={index}>
+                                      <button style={{ backgroundColor: `#${item.name === size ? `ef4444` : 'ffffff'}` }}
+ onClick={() => handleAttributeChange('size', item.name) } className={`${oswald.className} w-20 h-10 rounded-sm border-[1px] border-[#e6e6e6]`} key={index}>
                                           {item.name}
                                       </button>
                                   ))
@@ -111,7 +129,8 @@ const Products = ({params}:{params: string}) => {
                           <div className="allSizes flex gap-5">
                               {
                                   Products.colors.map((item, index) => (
-                                      <button onClick={() => handleAttributeChange('color', item.name)} className={`${oswald.className} w-10 h-5 rounded-lg border-[1px] bg-[${item.code}] border-[#e6e6e6]`} key={index}>
+                                      <button style={{ backgroundColor: `#${item.name === color ? item.code : 'ffffff'}` }}
+ onClick={() => handleAttributeChange('color', item.name)} className={`${oswald.className} w-20 h-10 rounded-lg border-[1px]  border-[#e6e6e6]`} key={index}>
                                         {item.name}
                                       </button>
                                   ))
