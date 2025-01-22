@@ -6,7 +6,7 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import { Orders } from "@/lib/actions/ACTIONS";
+
 import { Trash } from "lucide-react";
 
 
@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 
 interface ItemObject {
     key: string;
+    img: string;
     id: number;
     name: string;
     price: number;
@@ -37,7 +38,7 @@ interface OrderObject {
     address: string,
     number: string,
     total: number,
-    cartItem: { [key: string]: ItemObject }
+    products: ItemObject[]
 }
 
 
@@ -50,6 +51,8 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
     const [number, setNumber] = useState<string>('');
     const [address, setAddress] = useState<string>('');
     // const { isSignedIn, user } = useUser();
+
+    
 
     useEffect(() => {
         setCart(data)
@@ -142,7 +145,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
          localStorage.setItem('cart', JSON.stringify(updatedCart));
      };
     
-    const checkout = () => {
+    const handleCheckout = async () => {
        
 
         if (!email || !address || !number) {
@@ -160,10 +163,32 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
             address,
             number,
             total,
-            cartItem: cart
+            products: cartItems
         }
 
-        Orders(order);
+        try {
+            const response = await fetch('/api/paystack/create-checkout-session', {
+                    method: 'POST', 
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }, 
+                    body: JSON.stringify(order)
+            });
+
+            const data = await response.json();
+            if (data.authorizationUrl) {
+                window.location.href = data.authorizationUrl;
+            } else {
+                console.error('Error: No authorization URL received');
+                alert('An error occurred. Please try again.');
+            }
+
+            console.log(data)
+        } catch (error){
+            console.log(error)
+        }
+
+        
 
 
         alert(`Checkout successful! Total amount: $${total}`);
@@ -194,7 +219,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
                     </SheetDescription>
                 </SheetHeader>
                 <div className="gap-4 py-4 flex flex-col">
-                    <ul className="flex flex-col w-full gap-10 justify-around">
+                    <ul className="flex flex-col w-full gap-10 h-[400px] overflow-y-scroll justify-around">
                          {
                             cartItems.length && cartItems.map((items, index) => (
                                 
@@ -205,7 +230,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
                                             </div>
                                             <div className="info w-40 flex flex-col">
                                             <p>{items.name}</p>
-                                            <p>{items.price}</p>
+                                            <p className="font-bold">{items.price.toFixed(2)}</p>
                                             <div className="flex gap-6">
                                                 <p>
                                                     {items.color}
@@ -235,23 +260,30 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
                 <div className="total">
                     <div className="flex flex-col">
                     <label htmlFor="email">Email</label>
-                    <input value={email} type="email" name="" id="email" onChange={(e) => setEmail(e.target.value)} required/>
+                    <input className="p-5 border-[1px] border-black h-10 rounded-lg" value={email} type="email" name="" id="email" onChange={(e) => setEmail(e.target.value)} required/>
                     <label htmlFor="address">Address</label>
-                    <input value={address} type="" name="" id="address" onChange={(e) => setAddress(e.target.value)} required/>
+                    <input className="p-5 border-[1px] border-black h-10 rounded-lg" value={address} type="" name="" id="address" onChange={(e) => setAddress(e.target.value)} required/>
                     <label htmlFor="number">Phone Number</label>
-                    <input value={number} type="" name="" id="number" onChange={(e) => setNumber(e.target.value)} required/>
-                    <h1>total</h1>
+                    <input className="p-5 border-[1px] border-black h-10 rounded-lg" value={number} type="" name="" id="number" onChange={(e) => setNumber(e.target.value)} required/>
+                    
                     </div>
-                    <h3>
-                        {
-                            Object.keys(cart).reduce((total, priceKey) => {
-                                return total + data[priceKey].price; // Add the price of the current item to the total
-                            }, 0) // 0 is the initial value for the total
-                        }
-                    </h3>
-                    <button onClick={checkout}>
-                        Proceed to checkout
-                    </button>
+                    <div className="all flex gap-2 flex-col mt-5">
+                        <div className="flex gap-6">
+                            <h1 className="font-bold text-xl">total</h1>
+                            <h3 className="font-bold text-xl">
+                                {
+                                    Object.keys(cart).reduce((total, priceKey) => {
+                                        return total + data[priceKey].price; // Add the price of the current item to the total
+                                    }, 0).toFixed(2) // 0 is the initial value for the total
+                                }
+                            </h3>
+                        </div>
+                        
+                        <button className="bg-black text-white h-10 w-28 rounded-lg" onClick={handleCheckout}>
+                            checkout
+                        </button>
+                    </div>
+                    
                 
                 </div>
             </SheetContent>

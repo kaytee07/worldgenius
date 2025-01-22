@@ -2,7 +2,6 @@
 import { products } from '@/data'
 import Image from 'next/image'
 import React, {useState, useEffect} from 'react'
-import { useRouter } from 'next/navigation';
 import { Oswald } from 'next/font/google';
 
 
@@ -10,6 +9,8 @@ const oswald = Oswald({
   weight: ['400', '700'], // Specify the weights you want
   subsets: ['latin'], // You can specify other subsets if needed
 });
+
+
 
 // interface CartItem {
 //       id: string;
@@ -31,13 +32,16 @@ type Item = {
     size: string,
     quantity?: number
 }
+interface ProductProps {
+    params: {[key: string]: string};
+}
 
-const Products = ({params}:{params: string}) => {
+const Products: React.FC<ProductProps> = ({params}) => {
     const [ color, selectColor] = useState("");
     const [size, selectSize] = useState("");
     const Products = products[params.products as keyof typeof products]; 
     const [tempItem, setTempItem] = useState<Item>({id: 0, img: '', name: '', originalPrice: 0, price: 0,  color: '', size: '', quantity: 1, key: ''});
-    const router = useRouter();
+    
 
 
     function handleAttributeChange(key:string, value:string){
@@ -91,6 +95,7 @@ const Products = ({params}:{params: string}) => {
 
   
     useEffect(() => {
+        console.log(products, params)
         setTempItem((prevItem) => ({ ...prevItem, 'id': Products.id, 'name': Products.name, 'price': Products.price, 'originalPrice': Products.price }))
     }, [])
   return (

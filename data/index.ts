@@ -1,7 +1,7 @@
 export const navigation = [ 
     {
         name: "Shop",
-        url:"/aboutus"
+        url:"/shop"
     },
     {
         name: "Gallery",
@@ -12,98 +12,9 @@ export const navigation = [
         url:"/press"
     },
 ]
-export const ghanaBabe = [
-    {
-        name: "ghana babe croptop",
-        price: "200",
-        img: "/img/ghanababe.jpg"
-    },
-    {
-        name: "Ghana Babe Tops",
-        price: "100",
-        img: "/img/shirt2.avif"
-    },
-    {
-        name: "top turn round neck",
-        price: "120",
-        img: "/img/shirt1.avif"
-    },
-     {
-        name: "Lady Bird Turtle Neck",
-        price: "120",
-        img: "/img/fashion1.avif"
-    },        
-]
 
-export const collection = [
-    {
-        name: "vl weaved shirts",
-        price: "75",
-        img: "/img/shirt3.avif",
-        quantity: 7,
-        
-    },
-    {
-        name: "Ghana Babe Tops",
-        price: "100",
-        img: "/img/shirt2.avif"
-    },
-    {
-        name: "topturn round neck",
-        price: "120",
-        img: "/img/shirt1.avif"
-    },
-    {
-        name: "ladybird turtle neck",
-        price: "120",
-        img: "/img/shirt1.avif"
-    },    
-    {
-        name: "ladybird turtle neck",
-        price: "120",
-        img: "/img/fashion1.avif"
-    },
-    {
-        name: "ladybird turtle neck",
-        price: "120",
-        img: "/img/fashion2.avif"
-    },
-    {
-        name: "ladybird turtle neck",
-        price: "120",
-        img: "/img/fashion3.avif"
-    },
-    {
-        name: "ladybird turtle neck",
-        price: "120",
-        img: "/img/fashion4.avif"
-    },
-    {
-        name: "ladybird turtle neck",
-        price: "120",
-        img: "/img/fashion5.avif"
-    },
-    {
-        name: "ladybird turtle neck",
-        price: "120",
-        img: "/img/fashion6.avif"
-    },
-    {
-        name: "ladybird turtle neck",
-        price: "120",
-        img: "/img/fashion7.avif"
-    },
-    {
-        name: "ladybird turtle neck",
-        price: "120.00",
-        img: "/img/fashion8.avif"
-    },
-    {
-        name: "ladybird turtle neck",
-        price: "120.00",
-        img: "/img/fashion9.avif"
-    },    
-]
+
+
 export const products = {
     ghanababecroptop:{
         id:4,

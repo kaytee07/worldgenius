@@ -44,7 +44,7 @@ const NewArrivals = () => {
                 <img
                         src={`${products[item as keyof typeof products].img}`}
                 alt="card-image"
-                className="h-full w-full object-cover "
+                className="h-full w-full "
                 />
             </div>
             <div className="p-4">

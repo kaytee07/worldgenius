@@ -9,6 +9,7 @@ import { navigation } from '@/data'
 // import { useUser } from "@clerk/nextjs";
 interface Product {
     key: string;
+    img: string;
     originalPrice: number;
     id: number;
     name: string;

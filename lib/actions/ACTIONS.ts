@@ -1,5 +1,7 @@
 "use server"
 
+
+
 interface ItemObject {
     key: string;
     id: number;
@@ -22,4 +24,8 @@ interface OrderObject {
 export async function Orders(data:OrderObject) {
     console.log(data);
     
+}
+
+export async function Checkout () {
+   
 }
