@@ -2,11 +2,11 @@ import crypto from 'crypto';
 import { connectToDB } from "@/lib/db/database";
 import { Order } from '@/models/order';
 
-export const config = {
-    api: {
-        bodyParser: false
-    },
-};
+// export const config = {
+//     api: {
+//         bodyParser: false
+//     },
+// };
 
 
 export async function POST(req: Request) {
