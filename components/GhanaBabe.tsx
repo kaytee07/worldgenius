@@ -2,6 +2,7 @@
 import { products } from '@/data'
 import React, { useEffect } from 'react'
 import { Staatliches } from 'next/font/google';
+import { useSearchParams } from 'next/navigation'
 
 const staatliches = Staatliches({
     subsets: ['latin'],
@@ -24,12 +25,25 @@ interface Products {
 }
 
 const NewArrivals = () => {
+    const searchParams = useSearchParams()
+    
     const allproducts: Products = products
     useEffect(() => {
         Object.keys(allproducts).forEach((item: string) => {
             console.log(products[item as keyof typeof products])
         })
     }, [])
+
+
+    useEffect(() => {
+        
+        if (searchParams.size) {
+            localStorage.clear();
+            console.log('localStorage cleared');
+
+            window.location.href = "/";
+        }
+    }, [searchParams]);
     return (
         <div className="flex justify-center items-center flex-col mb-6">
             <div>

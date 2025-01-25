@@ -5,33 +5,26 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import NewArrivals from "@/components/NewArrivals";
 import SecondHero from "@/components/SecondHero";
-import { useSearchParams } from 'next/navigation'
-import { useEffect, Suspense } from "react";
+import { Suspense } from "react";
 
 
 export default function Home() {
-  const searchParams = useSearchParams()
+  
 
-  useEffect(() => {
-    
-    if (searchParams.size) {
-      localStorage.clear();
-      console.log('localStorage cleared');
-
-      window.location.href = "/";
-    }
-  }, [searchParams]);
+  
 
   return (
-    <Suspense>
+   
     <main>
       <Navbar/>
       <Hero/>
+      <Suspense>
       <GhanaBabe/>
+      </Suspense>
       <SecondHero/>
       <NewArrivals/>
       <Footer/>
     </main>
-    </Suspense>
+    
   );
 }
