@@ -210,7 +210,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
                 
 
             </SheetTrigger>
-            <SheetContent>
+            <SheetContent className="overflow-y-scroll">
                 <SheetHeader>
                     <SheetTitle>
                         <Link href="/">
@@ -223,7 +223,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
                     </SheetDescription>
                 </SheetHeader>
                 <div className="gap-4 py-4 flex flex-col">
-                    <ul className="flex flex-col w-full gap-10 h-[400px] overflow-y-scroll justify-start">
+                    <ul className="flex flex-col w-full gap-10 max-sm:h-[300px] h-[400px] overflow-y-scroll justify-start">
                          {
                             cartItems && cartItems.map((items, index) => (
                                 
