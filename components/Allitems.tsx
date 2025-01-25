@@ -29,7 +29,7 @@ const Allitems = () => {
     {
             Object.keys(allproducts).map((item: string,index)=> (
             <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200 md:w-72">
-                <div className="relative h-96 overflow-hidden bg-clip-border">
+                <div className="relative overflow-hidden bg-clip-border">
                     <img
                             src={`${products[item as keyof typeof products].img}`}
                     alt="card-image"
