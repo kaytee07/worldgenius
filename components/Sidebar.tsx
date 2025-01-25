@@ -55,12 +55,12 @@ export function SheetDemo() {
             {/* Make changes to your profile here. Click save when you're done. */}
           </SheetDescription>
         </SheetHeader>
-        <div className="gap-4 py-4 flex h-[24rem]">
-         <ul className="flex flex-col justify-around">
+        <div className="gap-4 py-4 flex h-[10rem]">
+         <ul className="flex flex-col justify-around ">
         {
             navigation.map((data, i) => (
             <a key={i} href={data.url}>
-              <li className="navitems text-[#317670]" >{data.name}</li>
+              <li className="navitems text-[#060a0a] font-bold text-lg" >{data.name}</li>
             </a>
           )
         )
