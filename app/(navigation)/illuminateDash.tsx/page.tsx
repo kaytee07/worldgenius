@@ -12,7 +12,7 @@ const Dashboard = () => {
                 <ul>
                     {
                         dashnav.map((name, index) => (
-                            <li key={index}>{name}</li>
+                            <li key={index}></li>
                         ))
                     }
                 </ul>
