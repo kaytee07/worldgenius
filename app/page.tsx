@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import NewArrivals from "@/components/NewArrivals";
 import SecondHero from "@/components/SecondHero";
 import { useSearchParams } from 'next/navigation'
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 
 
 export default function Home() {
@@ -23,6 +23,7 @@ export default function Home() {
   }, [searchParams]);
 
   return (
+    <Suspense>
     <main>
       <Navbar/>
       <Hero/>
@@ -31,5 +32,6 @@ export default function Home() {
       <NewArrivals/>
       <Footer/>
     </main>
+    </Suspense>
   );
 }
