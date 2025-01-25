@@ -133,6 +133,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
          }
      
          const product = cartItems[itemIndex];
+         if (product.quantity < 2) return;
          product.quantity--;
          product.price = product.originalPrice * product.quantity;
      
@@ -146,7 +147,10 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
      };
     
     const handleCheckout = async () => {
-       
+       if (cartItems.length === 0) {
+        alert("purchase an item");
+        return;
+       }
 
         if (!email || !address || !number) {
             alert('Please fill out all required fields: email, address, and number.');
@@ -191,13 +195,13 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
         
 
 
-        alert(`Checkout successful! Total amount: $${total}`);
+       
         // Here you can add your checkout logic (e.g., send data to a server)
     };
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <li className="relative">
+                <li className="relative list-none">
                     <div className='h-[14px] w-[14px] left-[14px] bottom-[14px]  flex justify-center items-center rounded-md bg-black text-white absolute'>
                         {cartItems.length}
                     </div>
@@ -219,9 +223,9 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
                     </SheetDescription>
                 </SheetHeader>
                 <div className="gap-4 py-4 flex flex-col">
-                    <ul className="flex flex-col w-full gap-10 h-[400px] overflow-y-scroll justify-around">
+                    <ul className="flex flex-col w-full gap-10 h-[400px] overflow-y-scroll justify-start">
                          {
-                            cartItems.length && cartItems.map((items, index) => (
+                            cartItems && cartItems.map((items, index) => (
                                 
                                     <li key={index} className="navitems text-[#317670] pb-5 w-full" >
                                         <div className="flex justify-evenly">

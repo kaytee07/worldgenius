@@ -95,12 +95,12 @@ const Products: React.FC<ProductProps> = ({params}) => {
 
   
     useEffect(() => {
-        console.log(products, params)
-        setTempItem((prevItem) => ({ ...prevItem, 'id': Products.id, 'name': Products.name, 'price': Products.price, 'originalPrice': Products.price }))
+        console.log(Products)
+        setTempItem((prevItem) => ({ ...prevItem, 'id': Products.id, 'name': Products.name, 'price': Products.price, 'originalPrice': Products.price, color: Products.colors[0].name }))
     }, [])
   return (
-    <div className='py-11'>
-      <div className="w-[90%] flex justify-center gap-16">
+    <div className='py-11 max-sm:flex max-sm:justify-center'>
+      <div className="w-[90%] flex max-sm:flex-col justify-center gap-16">
         <div>
             <Image
             src={Products.img}
@@ -129,19 +129,7 @@ const Products: React.FC<ProductProps> = ({params}) => {
                               }
                           </div>
                       </div>
-                      <div className="size-checkout">
-                          <h1 className={`font-bold ${oswald.className}`}>colors</h1>
-                          <div className="allSizes flex gap-5">
-                              {
-                                  Products.colors.map((item, index) => (
-                                      <button style={{ backgroundColor: `#${item.name === color ? item.code : 'ffffff'}` }}
- onClick={() => handleAttributeChange('color', item.name)} className={`${oswald.className} w-20 h-10 rounded-lg border-[1px]  border-[#e6e6e6]`} key={index}>
-                                        {item.name}
-                                      </button>
-                                  ))
-                              }
-                          </div>
-                      </div>
+                      
             
             {/* <div className="quantity flex flex-col">
                 <label htmlFor="quantity">Quantity</label>

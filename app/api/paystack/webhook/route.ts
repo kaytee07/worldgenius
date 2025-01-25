@@ -11,14 +11,18 @@ export const config = {
 
 export async function POST(req: Request) {
     const body = await req.text();
-    const secret = process.env.PAYSTACK_SECRET_KEY;
+    const secret: string | undefined = process.env.PAYSTACK_SECRET_KEY;
 
     try{
         await connectToDB()
-        const hash = crypto
+        let hash;
+        if (secret){
+            hash = crypto
             .createHmac('sha512', secret)
             .update(body, 'utf-8')
             .digest('hex');
+        }
+        
 
         if (hash === req.headers.get('x-paystack-signature')){
             const jsonData = JSON.parse(body);

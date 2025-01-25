@@ -25,7 +25,7 @@ const Allitems = () => {
         })
       }, [])
   return (
-      <ul className='grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw]'>
+      <ul className='grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw]'>
     {
             Object.keys(allproducts).map((item: string,index)=> (
             <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200 md:w-72">

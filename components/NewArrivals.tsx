@@ -36,9 +36,9 @@ const NewArrivals = () => {
     <div className={`flex  py-6 ${staatliches.className}`}>
         <h1 className='text-black text-4xl font-semibold tracking-wide'>NEW ARRIVALS</h1>
     </div>
-    <ul className='grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw]'>
+    <ul className='grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw]'>
     {
-        Object.keys(allproducts).slice(0, 4).map((item: string,index)=> (
+        Object.keys(allproducts).slice(3, 7).map((item: string,index)=> (
         <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200 md:w-72">
             <div className="relative h-96 overflow-hidden bg-clip-border">
                 <img

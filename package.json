@@ -14,6 +14,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "crypto": "^1.0.1",
+    "express": "^4.21.2",
     "lucide-react": "^0.447.0",
     "mongoose": "^8.9.3",
     "next": "14.2.15",
@@ -21,6 +22,8 @@
     "querystring": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
     "tailwind-merge": "^2.5.3",
     "tailwindcss-animate": "^1.0.7"
   },
