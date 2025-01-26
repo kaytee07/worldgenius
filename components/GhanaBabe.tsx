@@ -57,7 +57,7 @@ const NewArrivals = () => {
                 <ul className={`grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw] font-bold ${openSans.className}`}>
                     {
                         Object.keys(allproducts).reverse().slice(1, 5).map((item: string, index) => (
-                            <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200">
+                            <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border h-[409px] border-slate-200">
                                 <div className="relative overflow-hidden bg-clip-border">
                                     <img
                                         src={`${products[item as keyof typeof products].img}`}
@@ -66,7 +66,7 @@ const NewArrivals = () => {
                                     />
                                 </div>
                                 <div className="p-4">
-                                    <div className="mb-2 flex items-center justify-between">
+                                    <div className="mb-2 h-[72px] flex items-center justify-between">
                                         <p className="text-slate-800 text-md">
                                             {products[item as keyof typeof products].name}
                                         </p>
