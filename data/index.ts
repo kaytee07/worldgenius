@@ -67,6 +67,43 @@ export const products = {
         quantity: 7,
         otherImages: []
     },
+     gtatopcream:{
+        id: 0,
+        name: "GTA TOP CREAM",
+        price: 250.00,
+        img: "/img/gtacream.jpg",
+        sizes: [
+                       {
+                name: "S",
+                quantity: 90
+            },
+            {
+                name: "M",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "XXL",
+                quantity: 55
+            },
+             {
+                name: "XXXL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "Cream",
+                code: "CEBA7C"
+            },
+           
+        ],
+        quantity: 8,
+        otherImages: []
+    },
     gtatopgrey:{
         id: 0,
         name: "GTA TOP GREY",
@@ -139,43 +176,7 @@ export const products = {
         quantity: 8,
         otherImages: []
     },
-      gtatopcream:{
-        id: 0,
-        name: "GTA TOP CREAM",
-        price: 250.00,
-        img: "/img/gtacream.jpg",
-        sizes: [
-                       {
-                name: "S",
-                quantity: 90
-            },
-            {
-                name: "M",
-                quantity: 30
-            },
-            {
-                name: "XL",
-                quantity: 55
-            },
-            {
-                name: "XXL",
-                quantity: 55
-            },
-             {
-                name: "XXXL",
-                quantity: 55
-            }
-        ],
-        colors:[
-            {
-                name: "Cream",
-                code: "CEBA7C"
-            },
-           
-        ],
-        quantity: 8,
-        otherImages: []
-    },
+     
       gtatopblack:{
         id: 0,
         name: "GTA TOP BLACK",

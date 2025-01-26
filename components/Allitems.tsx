@@ -1,6 +1,10 @@
 "use client"
 import { products } from '@/data'
 import React, { useEffect } from 'react'
+import { Inter } from '@next/font/google';
+
+
+const openSans = Inter({ subsets: ['latin'] });
 
 interface Product {
     id: number;
@@ -18,6 +22,7 @@ interface Products {
 }
 
 const Allitems = () => {
+    
  const allproducts: Products = products
       useEffect(() => {
         Object.keys(allproducts).forEach((item: string) => {
@@ -25,10 +30,10 @@ const Allitems = () => {
         })
       }, [])
   return (
-      <ul className='grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw]'>
+      <ul className={`grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw] font-bold ${openSans.className}`}>
     {
             Object.keys(allproducts).map((item: string,index)=> (
-            <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200 md:w-72">
+            <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200">
                 <div className="relative overflow-hidden bg-clip-border">
                     <img
                             src={`${products[item as keyof typeof products].img}`}

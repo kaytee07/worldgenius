@@ -2,6 +2,10 @@
 import { products } from '@/data'
 import React, { useEffect} from 'react'
 import { Staatliches } from 'next/font/google';
+import { Inter } from '@next/font/google';
+
+
+const openSans = Inter({ subsets: ['latin'] });
 
 const staatliches = Staatliches({
   subsets: ['latin'], 
@@ -39,7 +43,7 @@ const NewArrivals = () => {
     <ul className='grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw]'>
     {
         Object.keys(allproducts).slice(3, 7).map((item: string,index)=> (
-        <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200 md:w-72">
+            <div key={index} className={`relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200 font-bold ${openSans.className}`}>
             <div className="relative overflow-hidden bg-clip-border">
                 <img
                         src={`${products[item as keyof typeof products].img}`}
