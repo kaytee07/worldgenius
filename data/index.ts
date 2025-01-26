@@ -50,11 +50,11 @@ export const products = {
                 quantity: 55
             },
             {
-                name: "XXL",
+                name: "2XL",
                 quantity: 55
             },
              {
-                name: "XXXL",
+                name: "3XL",
                 quantity: 55
             }
         ],
@@ -67,9 +67,9 @@ export const products = {
         quantity: 7,
         otherImages: []
     },
-     gtatopcream:{
+     gtaaccrashirtcream:{
         id: 0,
-        name: "GTA TOP CREAM",
+        name: "GTA ACCRA SHIRT CREAM",
         price: 250.00,
         img: "/img/gtacream.jpg",
         sizes: [
@@ -100,9 +100,9 @@ export const products = {
         quantity: 8,
         otherImages: []
     },
-    gtatopgrey:{
+    gtaaccrashirtgrey:{
         id: 0,
-        name: "GTA TOP GREY",
+        name: "GTA ACCRA SHIRT GREY",
         price: 250.00,
         img: "/img/gtagrey.jpg",
         sizes: [
@@ -132,9 +132,9 @@ export const products = {
         quantity: 8,
         otherImages: []
     },
-      gtatopwhite:{
+      gtaaccrashirtwhite:{
         id: 0,
-        name: "GTA TOP WHITE",
+        name: "GTA ACCRA SHIRT WHITE",
         price: 250.00,
         img: "/img/gtawhite.jpg",
         sizes: [
@@ -165,12 +165,13 @@ export const products = {
         otherImages: []
     },
      
-      gtatopblack:{
+      gtaaccrashirtblack:{
         id: 0,
-        name: "GTA TOP BLACK",
+        name: "GTA ACCRA SHIRT BLACK",
         price: 250.00,
         img: "/img/gtablack.jpg",
         sizes: [
+                  ,
             {
                 name: "M",
                 quantity: 30
@@ -229,11 +230,33 @@ export const products = {
                 name: "SAME SIZE",
                 quantity: 20
             },
+           
+        ],
+        colors:[
+            {
+                name: "Sea Blue",
+                code: "e71016"
+            },
+           
+        ],
+        quantity: 7,
+        otherImages: []
+    },
+    topoftheworldcapblackandwhite:{
+        id: 1,
+        name: "TOP OF THE WORLD CAP BLACK AND WHITE",
+        price: 100.00,
+        img: "/img/topoftheworldblackandwhite.png",
+        sizes: [
+            {
+                name: "SAME SIZE",
+                quantity: 20
+            },
             
         ],
         colors:[
             {
-                name: "sea blue",
+                name: "black and white",
                 code: "e71016"
             },
            
@@ -247,7 +270,52 @@ export const products = {
         price: 200.00,
         img: "/img/ghanaboysblack.jpg",
         sizes: [
-                      ,
+                       {
+                name: "S",
+                quantity: 90
+            },
+            {
+                name: "M",
+                quantity: 30
+            },
+            {
+                name: "L",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+             {
+                name: "3XL",
+                quantity: 55
+            },
+             {
+                name: "4XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "Black",
+                code: "88498F"
+            },
+           
+        ],
+        quantity: 7,
+        otherImages: []
+    },
+    accrawedey:{
+        id: 2,
+        name: "ACCRA WE DEY",
+        price: 200.00,
+        img: "/img/419front.jpg",
+        sizes: [
+                     
             {
                 name: "M",
                 quantity: 30
@@ -289,7 +357,10 @@ export const products = {
         price: 200.00,
         img: "/img/ineedspace.jpg",
         sizes: [
-                      ,
+                       {
+                name: "S",
+                quantity: 90
+            },
             {
                 name: "M",
                 quantity: 30
