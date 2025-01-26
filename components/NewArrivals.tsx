@@ -1,6 +1,6 @@
 "use client"
 import { products } from '@/data'
-import React, { useEffect} from 'react'
+import React from 'react'
 import { Staatliches } from 'next/font/google';
 import { Inter } from '@next/font/google';
 
@@ -29,11 +29,7 @@ interface Products {
 
 const NewArrivals = () => {
     const allproducts: Products = products
-  useEffect(() => {
-    Object.keys(allproducts).forEach((item: string) => {
-        console.log(products[item as keyof typeof products])
-    })
-  }, [])
+  
   return (
     <div className="flex justify-center items-center flex-col mb-6">
     <div>

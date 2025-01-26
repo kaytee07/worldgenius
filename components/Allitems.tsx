@@ -25,9 +25,7 @@ const Allitems = () => {
     
  const allproducts: Products = products
       useEffect(() => {
-        Object.keys(allproducts).forEach((item: string) => {
-            console.log(products[item as keyof typeof products])
-        })
+        
       }, [])
   return (
       <ul className={`grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw] font-bold ${openSans.className}`}>

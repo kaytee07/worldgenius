@@ -33,21 +33,23 @@ const NewArrivals = () => {
     
     const allproducts: Products = products
     useEffect(() => {
-        Object.keys(allproducts).forEach((item: string) => {
-            console.log(products[item as keyof typeof products])
-        })
-    }, [])
-
-
-    useEffect(() => {
-        
+        console.log(searchParams)
         if (searchParams.size) {
+
             localStorage.clear();
             console.log('localStorage cleared');
 
             window.location.href = "/";
         }
-    }, [searchParams]);
+        // Object.keys(allproducts).forEach((item: string) => {
+        //     console.log(products[item as keyof typeof products])
+        // })
+    }, [])
+
+
+    // useEffect(() => {
+
+    // }, [searchParams]);
     return (
         <div className="flex justify-center items-center flex-col mb-6">
             <div>
