@@ -84,7 +84,7 @@ const NewArrivals = () => {
                                 <div className="p-4">
                                     <div className="mb-2 flex items-center justify-between">
                                         <p className="text-slate-800 text-md">
-                                            {truncateString(products[item as keyof typeof products].name, 15)}
+                                            {truncateString(products[item as keyof typeof products].name, 10)}
                                         </p>
                                         <p className="text-black text-md font-semibold">
                                             ₵{products[item as keyof typeof products].price}
