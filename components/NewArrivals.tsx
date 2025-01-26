@@ -3,7 +3,6 @@ import { products } from '@/data'
 import React from 'react'
 import { Staatliches } from 'next/font/google';
 import { Lexend_Giga } from '@next/font/google';
-import Link from 'next/link';
 
 
 
