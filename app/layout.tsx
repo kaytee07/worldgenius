@@ -15,9 +15,9 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "WorldG3nius",
-  description: "Travel around Ghana with us",
+  description: "ShopNow",
    icons: {
-    icon: "/favicon.ico"
+    icon: "/logo1.png"
   },
 };
 

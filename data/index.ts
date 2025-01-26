@@ -246,6 +246,72 @@ export const products = {
         quantity: 7,
         otherImages: []
     },
+        topoftheworldcapseablue:{
+        id: 1,
+        name: "TOP OF THE WORLD CAP SEA BLUE",
+        price: 100.00,
+        img: "/img/topoftheworldseablue.png",
+        sizes: [
+            {
+                name: "S",
+                quantity: 20
+            },
+            {
+                name: "M",
+                quantity: 90
+            },
+            {
+                name: "L",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "Red and black",
+                code: "e71016"
+            },
+           
+        ],
+        quantity: 7,
+        otherImages: []
+    },
+    topoftheworldcapblackandwhite:{
+        id: 1,
+        name: "TOP OF THE WORLD CAP BLACK AND WHITE",
+        price: 100.00,
+        img: "/img/topoftheworldblackandwhite.png",
+        sizes: [
+            {
+                name: "S",
+                quantity: 20
+            },
+            {
+                name: "M",
+                quantity: 90
+            },
+            {
+                name: "L",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "black and white",
+                code: "e71016"
+            },
+           
+        ],
+        quantity: 7,
+        otherImages: []
+    },
     ghanaboysshirt:{
         id: 2,
         name: "GHANA BOYS SHIRT",
