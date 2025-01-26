@@ -36,11 +36,12 @@ const Navbar = () => {
     }, []);
 
   return (
-    <header className='flex flex-row justify-between items-center py-3 px-9'>
+    <header className='flex flex-row justify-between items-center py-3 px-9 text-white bg-black'>
         <div className='flex flex-row justify-between items-center w-full'>
         <div className="logo">
             <a href="/">
-               <img className="w-[10%]" src="/img/logo1.png" alt="" />
+               {/* <img className="w-[10%]" src="/img/logo1.png" alt="" /> */}
+               WORLDG3NIUS
             </a>
         </div>
         <nav 
