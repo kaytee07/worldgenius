@@ -11,10 +11,12 @@
   "dependencies": {
     "@next/font": "^14.2.15",
     "@radix-ui/react-dialog": "^1.1.4",
+    "@radix-ui/react-slot": "^1.1.1",
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "crypto": "^1.0.1",
+    "embla-carousel-react": "^8.5.2",
     "express": "^4.21.2",
     "lucide-react": "^0.447.0",
     "mongoose": "^8.9.3",
