@@ -1,14 +1,7 @@
 "use client"
 import { products } from '@/data'
 import React from 'react'
-import { Staatliches } from 'next/font/google';
 
-
-
-const staatliches = Staatliches({
-  subsets: ['latin'], 
-  weight: ['400'],
-});
 
 interface Product {
     id: number;
@@ -37,11 +30,11 @@ const NewArrivals = () => {
   
   return (
     <div className="flex justify-center items-center flex-col mb-6">
-    <div>
-    <div className={`flex  py-6 ${staatliches.className}`}>
-        <h1 className='text-black text-4xl font-semibold tracking-wide'>BLACK STAR COLLECTION</h1>
+    <div className='flex flex-col items-center'>
+    <div className={`flex  py-6`}>
+        <h1 className='text-black text-4xl max-sm:text-start ml-5 font-semibold tracking-wide'>BLACK STAR COLLECTION</h1>
     </div>
-    <ul className='grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw]'>
+    <ul className='grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 w-[93vw]'>
     {
             Object.keys(allproducts).reverse().slice(1, 5).map((item: string,index)=> (
             

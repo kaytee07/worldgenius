@@ -35,7 +35,7 @@ const NewArrivals = () => {
         return str;
     }
     
-    const allproducts: Products = products
+
     useEffect(() => {
         console.log(searchParams)
         if (searchParams.size) {
@@ -58,7 +58,7 @@ const NewArrivals = () => {
                 <div className={`flex  py-6 ${staatliches.className}`}>
                     <h1 className='text-black text-4xl font-semibold tracking-wide'>BEST SELLING</h1>
                 </div>
-                <ul className={`grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw] font-bold`}>
+                <ul className={`grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 w-[93vw] font-bold`}>
                     {
                         Object.keys(bestSelling).slice(0, 4).map((item: string, index) => (
                             
