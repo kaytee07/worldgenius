@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "WorldG3nius",
   description: "ShopNow",
    icons: {
-    icon: "/logo1.png"
+    icon: "/favicon.ico"
   },
 };
 

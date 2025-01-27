@@ -18,7 +18,7 @@ interface Product {
     sizes: { name: string; quantity: number }[];
     colors: { name: string; code: string }[];
     quantity: number;
-    otherImages: never[];
+    otherImages: string[];
 }
 
 interface Products {
@@ -39,11 +39,11 @@ const NewArrivals = () => {
     <div className="flex justify-center items-center flex-col mb-6">
     <div>
     <div className={`flex  py-6 ${staatliches.className}`}>
-        <h1 className='text-black text-4xl font-semibold tracking-wide'>NEW ARRIVALS</h1>
+        <h1 className='text-black text-4xl font-semibold tracking-wide'>BLACK STAR COLLECTION</h1>
     </div>
     <ul className='grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw]'>
     {
-        Object.keys(allproducts).slice(3, 7).map((item: string,index)=> (
+            Object.keys(allproducts).reverse().slice(1, 5).map((item: string,index)=> (
             
             <li key={index} className={`cursor relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200 font-bold`}>
             <div className="relative overflow-hidden bg-clip-border">

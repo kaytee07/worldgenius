@@ -2,6 +2,14 @@
 import { products } from '@/data'
 import Image from 'next/image'
 import React, {useState, useEffect} from 'react'
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
+
 
 
 
@@ -95,18 +103,24 @@ const Products: React.FC<ProductProps> = ({params}) => {
         setTempItem((prevItem) => ({ ...prevItem, 'id': Products.id, 'name': Products.name, 'price': Products.price, 'originalPrice': Products.price, color: Products.colors[0].name }))
     }, [])
   return (
-    <div className='py-11 max-sm:flex max-sm:justify-center'>
-      <div className="w-[90%] flex max-sm:flex-col justify-center gap-16">
-        <div>
-            <Image
-            src={Products.img}
-            alt="product"
-            width={400}
-            height={400}
-            />
-        
-            
-        </div>
+    <div className='py-11 max-sm:flex max-sm:justify-center p-5'>
+      <div className=" flex max-sm:flex-col justify-center gap-16 w-full">
+              <Carousel className='md:mr-16 md:mb-40'>
+                  <CarouselContent>
+                     {
+                        Products.otherImages.map((item, index)=> (
+                            <CarouselItem key={index} className="md:w-52">
+                                <img src={item} className="" alt="" />
+                            </CarouselItem>
+                        ))
+                     }
+                      
+                    
+                  </CarouselContent>
+                  <CarouselPrevious className="max-sm:absolute max-sm:left-1" />
+                  <CarouselNext className="max-sm:absolute max-sm:right-1" />
+              </Carousel>
+
         <div>
             <div className="name-price">
                 <h3 className={`text-md font-bold`}>{Products.name}</h3>

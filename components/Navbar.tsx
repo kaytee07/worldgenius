@@ -40,8 +40,7 @@ const Navbar = () => {
         <div className='flex flex-row justify-between items-center w-full'>
         <div className="logo">
             <a href="/">
-               {/* <img className="w-[10%]" src="/img/logo1.png" alt="" /> */}
-               WORLDG3NIUS
+               <img className="w-[100px]" src="/img/websitelogo.png" alt="" />
             </a>
         </div>
         <nav 

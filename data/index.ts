@@ -35,48 +35,10 @@ export const dashnav = [
     }
 ]
 
-
-
-export const products = {
-    ghanababecroptop:{
-        id:4,
-        name: "GHANA BABE CROPTOP",
-        price: 200.00,
-        img: "/img/ghanababe.jpg",
-        sizes: [
-            {
-                name: "S",
-                quantity: 90
-            },
-            {
-                name: "M",
-                quantity: 30
-            },
-            {
-                name: "XL",
-                quantity: 55
-            },
-            {
-                name: "2XL",
-                quantity: 55
-            },
-             {
-                name: "3XL",
-                quantity: 55
-            }
-        ],
-        colors:[
-            {
-                name: "White",
-                code: "FFFFF"
-            },
-        ],
-        quantity: 7,
-        otherImages: []
-    },
-     gtatopcream:{
+export const bestSelling = {
+    gtaaccrashirtcream:{
         id: 0,
-        name: "GTA TOP CREAM",
+        name: "GTA ACCRA SHIRT CREAM",
         price: 250.00,
         img: "/img/gtacream.jpg",
         sizes: [
@@ -109,267 +71,6 @@ export const products = {
            
         ],
         quantity: 8,
-        otherImages: []
-    },
-    gtatopgrey:{
-        id: 0,
-        name: "GTA TOP GREY",
-        price: 250.00,
-        img: "/img/gtagrey.jpg",
-        sizes: [
-                       {
-                name: "S",
-                quantity: 90
-            },
-            {
-                name: "M",
-                quantity: 30
-            },
-            {
-                name: "XL",
-                quantity: 55
-            },
-            {
-                name: "2XL",
-                quantity: 55
-            },
-             {
-                name: "3XL",
-                quantity: 55
-            }
-        ],
-        colors:[
-            {
-                name: "Grey",
-                code: "3A3A3A"
-            },
-        ],
-        quantity: 8,
-        otherImages: []
-    },
-      gtatopwhite:{
-        id: 0,
-        name: "GTA TOP WHITE",
-        price: 250.00,
-        img: "/img/gtawhite.jpg",
-        sizes: [
-                       {
-                name: "S",
-                quantity: 90
-            },
-            {
-                name: "M",
-                quantity: 30
-            },
-            {
-                name: "XL",
-                quantity: 55
-            },
-            {
-                name: "2XL",
-                quantity: 55
-            },
-             {
-                name: "3XL",
-                quantity: 55
-            }
-        ],
-        colors:[
-            {
-                name: "White",
-                code: "FFFFFF"
-            },
-        ],
-        quantity: 8,
-        otherImages: []
-    },
-     
-      gtatopblack:{
-        id: 0,
-        name: "GTA TOP BLACK",
-        price: 250.00,
-        img: "/img/gtablack.jpg",
-        sizes: [
-                       {
-                name: "S",
-                quantity: 90
-            },
-            {
-                name: "M",
-                quantity: 30
-            },
-            {
-                name: "XL",
-                quantity: 55
-            },
-            {
-                name: "2XL",
-                quantity: 55
-            },
-             {
-                name: "3XL",
-                quantity: 55
-            }
-        ],
-        colors:[
-            {
-                name: "Black",
-                code: "000000"
-            }
-        ],
-        quantity: 8,
-        otherImages: []
-    },
-    dndtrackercap:{
-        id: 1,
-        name: "DND TRUCKER CAP",
-        price: 100.00,
-        img: "/img/dndcap.jpg",
-        sizes: [
-            {
-                name: "SAME SIZE",
-                quantity: 20
-            },
-            
-        ],
-        colors:[
-            {
-                name: "Red and black",
-                code: "e71016"
-            },
-           
-        ],
-        quantity: 7,
-        otherImages: []
-    },
-        topoftheworldcapseablue:{
-        id: 1,
-        name: "TOP OF THE WORLD CAP SEA BLUE",
-        price: 100.00,
-        img: "/img/topoftheworldseablue.png",
-        sizes: [
-            {
-                name: "SAME SIZE",
-                quantity: 20
-            },
-           
-        ],
-        colors:[
-            {
-                name: "Sea Blue",
-                code: "e71016"
-            },
-           
-        ],
-        quantity: 7,
-        otherImages: []
-    },
-    topoftheworldcapblackandwhite:{
-        id: 1,
-        name: "TOP OF THE WORLD CAP BLACK AND WHITE",
-        price: 100.00,
-        img: "/img/topoftheworldblackandwhite.png",
-        sizes: [
-            {
-                name: "SAME SIZE",
-                quantity: 20
-            },
-            
-        ],
-        colors:[
-            {
-                name: "black and white",
-                code: "e71016"
-            },
-           
-        ],
-        quantity: 7,
-        otherImages: []
-    },
-    ghanaboysshirt:{
-        id: 2,
-        name: "GHANA BOYS SHIRT",
-        price: 200.00,
-        img: "/img/ghanaboysblack.jpg",
-        sizes: [
-                       {
-                name: "S",
-                quantity: 90
-            },
-            {
-                name: "M",
-                quantity: 30
-            },
-            {
-                name: "L",
-                quantity: 30
-            },
-            {
-                name: "XL",
-                quantity: 55
-            },
-            {
-                name: "2XL",
-                quantity: 55
-            },
-             {
-                name: "3XL",
-                quantity: 55
-            },
-             {
-                name: "4XL",
-                quantity: 55
-            }
-        ],
-        colors:[
-            {
-                name: "Black",
-                code: "88498F"
-            },
-           
-        ],
-        quantity: 7,
-        otherImages: []
-    },
-    accrawedeyshirt:{
-        id: 2,
-        name: "ACCRA WE DEY SHIRT",
-        price: 200.00,
-        img: "/img/419front.jpg",
-        sizes: [
-            {
-                name: "M",
-                quantity: 30
-            },
-            {
-                name: "L",
-                quantity: 30
-            },
-            {
-                name: "XL",
-                quantity: 55
-            },
-            {
-                name: "2XL",
-                quantity: 55
-            },
-             {
-                name: "3XL",
-                quantity: 55
-            },
-             {
-                name: "4XL",
-                quantity: 55
-            }
-        ],
-        colors:[
-            {
-                name: "Black",
-                code: "88498F"
-            },
-           
-        ],
-        quantity: 7,
         otherImages: []
     },
     ineedspacetops:{
@@ -416,5 +117,469 @@ export const products = {
         ],
         quantity: 7,
         otherImages: []
+    },
+    ghanababecroptop:{
+        id:4,
+        name: "GHANA BABE CROPTOP",
+        price: 200.00,
+        img: "/img/ghanababe.jpg",
+        sizes: [
+            {
+                name: "S",
+                quantity: 90
+            },
+            {
+                name: "M",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+             {
+                name: "3XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "White",
+                code: "FFFFF"
+            },
+        ],
+        quantity: 7,
+        otherImages: []
+    },
+    dndtrackercap:{
+        id: 1,
+        name: "DND TRACKER CAP",
+        price: 100.00,
+        img: "/img/dndcap.jpg",
+        sizes: [
+            {
+                name: "SAME SIZE",
+                quantity: 20
+            },
+            
+        ],
+        colors:[
+            {
+                name: "Red and black",
+                code: "e71016"
+            },
+           
+        ],
+        quantity: 7,
+        otherImages: []
+    },
+        topoftheworldcapseablue:{
+        id: 1,
+        name: "TOP OF THE WORLD CAP SEA BLUE",
+        price: 100.00,
+        img: "/img/topoftheworldseablue.png",
+        sizes: [
+            {
+                name: "SAME SIZE",
+                quantity: 20
+            },
+           
+        ],
+        colors:[
+            {
+                name: "Sea Blue",
+                code: "e71016"
+            },
+           
+        ],
+        quantity: 7,
+        otherImages: []
+    }
+}
+
+export const products = {
+    ghanababecroptop:{
+        id:4,
+        name: "GHANA BABE CROPTOP",
+        price: 200.00,
+        img: "/img/ghanababe.jpg",
+        sizes: [
+            {
+                name: "S",
+                quantity: 90
+            },
+            {
+                name: "M",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+             {
+                name: "3XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "White",
+                code: "FFFFF"
+            },
+        ],
+        quantity: 7,
+        otherImages: ["/img/ghanababe.jpg"]
+    },
+     gtaaccrashirtcream:{
+        id: 0,
+        name: "GTA ACCRA SHIRT CREAM",
+        price: 250.00,
+        img: "/img/gtacream.jpg",
+        sizes: [
+                       {
+                name: "S",
+                quantity: 90
+            },
+            {
+                name: "M",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+             {
+                name: "3XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "Cream",
+                code: "CEBA7C"
+            },
+           
+        ],
+        quantity: 8,
+        otherImages: ["/img/gtacream.jpg"]
+    },
+    gtaaccrashirtgrey:{
+        id: 0,
+        name: "GTA ACCRA SHIRT GREY",
+        price: 250.00,
+        img: "/img/gtagrey.jpg",
+        sizes: [
+                       {
+                name: "S",
+                quantity: 90
+            },
+            {
+                name: "M",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+             {
+                name: "3XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "Grey",
+                code: "3A3A3A"
+            },
+        ],
+        quantity: 8,
+        otherImages: ["/img/gtagrey.jpg"]
+    },
+      gtaaccrashirtwhite:{
+        id: 0,
+        name: "GTA ACCRA SHIRT WHITE",
+        price: 250.00,
+        img: "/img/gtawhite.jpg",
+        sizes: [
+                       {
+                name: "S",
+                quantity: 90
+            },
+            {
+                name: "M",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+             {
+                name: "3XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "White",
+                code: "FFFFFF"
+            },
+        ],
+        quantity: 8,
+        otherImages: ["/img/gtawhite.jpg"]
+    },
+     
+      gtatopblack:{
+        id: 0,
+        name: "GTA TOP BLACK",
+        price: 250.00,
+        img: "/img/gtablack.jpg",
+        sizes: [
+                       {
+                name: "S",
+                quantity: 90
+            },
+            {
+                name: "M",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+             {
+                name: "3XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "Black",
+                code: "000000"
+            }
+        ],
+        quantity: 8,
+        otherImages: ["/img/gtablack.jpg"]
+    },
+    dndtrackercap:{
+        id: 1,
+        name: "DND TRACKER CAP",
+        price: 100.00,
+        img: "/img/dndcap.jpg",
+        sizes: [
+            {
+                name: "SAME SIZE",
+                quantity: 20
+            },
+            
+        ],
+        colors:[
+            {
+                name: "Red and black",
+                code: "e71016"
+            },
+           
+        ],
+        quantity: 7,
+        otherImages: ["/img/dndcap.jpg"]
+    },
+        topoftheworldcapseablue:{
+        id: 1,
+        name: "TOP OF THE WORLD CAP SEA BLUE",
+        price: 100.00,
+        img: "/img/topoftheworldseablue.png",
+        sizes: [
+            {
+                name: "SAME SIZE",
+                quantity: 20
+            },
+           
+        ],
+        colors:[
+            {
+                name: "Sea Blue",
+                code: "e71016"
+            },
+           
+        ],
+        quantity: 7,
+        otherImages: []
+    },
+    topoftheworldcapblackandwhite:{
+        id: 1,
+        name: "TOP OF THE WORLD CAP BLACK AND WHITE",
+        price: 100.00,
+        img: "/img/topoftheworldblackandwhite.png",
+        sizes: [
+            {
+                name: "SAME SIZE",
+                quantity: 20
+            },
+            
+        ],
+        colors:[
+            {
+                name: "black and white",
+                code: "e71016"
+            },
+           
+        ],
+        quantity: 7,
+        otherImages: ["/img/topoftheworldblackandwhite.png"]
+    },
+    ghanaboysshirt:{
+        id: 2,
+        name: "GHANA BOYS SHIRT",
+        price: 200.00,
+        img: "/img/ghanaboysblack.jpg",
+        sizes: [
+                       {
+                name: "S",
+                quantity: 90
+            },
+            {
+                name: "M",
+                quantity: 30
+            },
+            {
+                name: "L",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+             {
+                name: "3XL",
+                quantity: 55
+            },
+             {
+                name: "4XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "Black",
+                code: "88498F"
+            },
+           
+        ],
+        quantity: 7,
+        otherImages: ["ghanaboysblack.jpg"]
+    },
+    accrawedeyshirt:{
+        id: 2,
+        name: "ACCRA WE DEY SHIRT",
+        price: 200.00,
+        img: "/img/419front.jpg",
+        sizes: [
+            {
+                name: "M",
+                quantity: 30
+            },
+            {
+                name: "L",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+             {
+                name: "3XL",
+                quantity: 55
+            },
+             {
+                name: "4XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "Black",
+                code: "88498F"
+            },
+           
+        ],
+        quantity: 7,
+        otherImages: ["/img/419front.jpg", "/img/419back.jpg"]
+    },
+    ineedspacetops:{
+        id: 2,
+        name: "I NEED SPACE TOPS",
+        price: 200.00,
+        img: "/img/ineedspace.jpg",
+        sizes: [
+                       {
+                name: "S",
+                quantity: 90
+            },
+            {
+                name: "M",
+                quantity: 30
+            },
+            {
+                name: "L",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+             {
+                name: "3XL",
+                quantity: 55
+            },
+             {
+                name: "4XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "Black",
+                code: "88498F"
+            },
+           
+        ],
+        quantity: 7,
+        otherImages: [
+           "/img/ghanababe.jpg"
+        ]
     },
 }

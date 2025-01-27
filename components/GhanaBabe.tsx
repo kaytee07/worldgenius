@@ -1,5 +1,5 @@
 "use client"
-import { products } from '@/data'
+import { bestSelling, products } from '@/data'
 import React, { useEffect } from 'react'
 import { Staatliches } from 'next/font/google';
 import { useSearchParams } from 'next/navigation'
@@ -18,7 +18,7 @@ interface Product {
     sizes: { name: string; quantity: number }[];
     colors: { name: string; code: string }[];
     quantity: number;
-    otherImages: never[];
+    otherImages: string[];
 }
 
 interface Products {
@@ -60,7 +60,7 @@ const NewArrivals = () => {
                 </div>
                 <ul className={`grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw] font-bold`}>
                     {
-                        Object.keys(allproducts).reverse().slice(1, 5).map((item: string, index) => (
+                        Object.keys(bestSelling).slice(0, 4).map((item: string, index) => (
                             
                             <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200">
                                 <div className="relative overflow-hidden bg-clip-border">

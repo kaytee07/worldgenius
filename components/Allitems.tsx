@@ -11,7 +11,7 @@ interface Product {
     sizes: { name: string; quantity: number }[];
     colors: { name: string; code: string }[];
     quantity: number;
-    otherImages: never[];
+    otherImages: string[];
 }
 
 interface Products {
