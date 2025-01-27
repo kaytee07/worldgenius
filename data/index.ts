@@ -579,7 +579,7 @@ export const products = {
         ],
         quantity: 7,
         otherImages: [
-           "/img/ghanababe.jpg"
+           "/img/ineedspace.jpg"
         ]
     },
 }
