@@ -21,9 +21,7 @@ interface Product {
     otherImages: string[];
 }
 
-interface Products {
-    [key: string]: Product;
-}
+
 
 const NewArrivals = () => {
     const searchParams = useSearchParams();
