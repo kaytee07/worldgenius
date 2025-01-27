@@ -26,16 +26,27 @@ const NewArrivals = () => {
     
 
     useEffect(() => {
-        console.log(searchParams)
-        if (searchParams.size) {
+        // Check for specific Paystack parameters
+        const reference = searchParams.get('reference');
+        const status = searchParams.get('trxref');
+        console.log(reference, status)
+        if (reference || status) {
+            // Clear only cart data (not entire localStorage)
+            localStorage.removeItem('cart');
+            const cleanUrl = window.location.pathname;
+            window.history.replaceState(null, '', cleanUrl);
 
-            localStorage.clear();
-            console.log('localStorage cleared');
+            // Redirect to success page with client-side navigation
+            alert('success');
 
-            window.location.href = "/";
-        }
+           
+        } else if (status === 'failed') {
         
-    }, [])
+            alert('failed');
+        }
+    }, [searchParams]);
+
+   
 
 
     // useEffect(() => {
