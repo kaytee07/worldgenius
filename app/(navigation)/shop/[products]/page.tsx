@@ -132,7 +132,7 @@ const Products: React.FC<ProductProps> = ({params}) => {
                 <input type="number" name="quantity" id="quantity" />
             </div> */}
             <div className="pay">
-                <button onClick={addToCart} className={`w-36 my-7 text-lg bg-black text-white h-10 rounded-sm`}>add to bag</button>
+                <button onClick={addToCart} className={`w-36 my-7 text-lg bg-black text-white h-10 rounded-sm`}>add to cart</button>
             </div>
         </div>
       </div>

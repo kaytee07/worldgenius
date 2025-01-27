@@ -53,7 +53,7 @@ const Gallery = () => {
               <div>
                   <img
                       className="h-auto max-w-full rounded-lg object-cover object-center"
-                      src="/img/insp3.jpg"
+                      src="/img/insp3.jpgimg/ghanababepotrait3.jpg"
                       alt="gallery-photo"
                   />
               </div>
