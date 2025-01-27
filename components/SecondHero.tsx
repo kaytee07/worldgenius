@@ -4,7 +4,7 @@ const SecondHero = () => {
   return (
     <div className="">
       <div className="sideInfo flex justify-center relative max-sm:bg-[url(/img/websiteheadermobile2.png)] md:bg-[url('/img/websiteheader2.png')] bg-cover bg-center h-96 w-[100%]">
-            <button className="absolute bg-white text-black w-36 border-[1px] bottom-7 border-white">Shop Now</button>
+            {/* <button className="absolute bg-white text-black w-36 border-[1px] bottom-7 border-white">Shop Now</button> */}
         </div>
     </div>
   )
