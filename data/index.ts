@@ -13,6 +13,13 @@ export const navigation = [
     },
 ]
 
+export const press = [
+    {
+        img: "https://i.ytimg.com/vi/jUO0dUHJeSo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLADD9hmVeFk2aVIWKgMjRNO923oIg",
+        link: "https://imullar.com/2024/08/20/editors-choice-ghanaian-streetwear-brands-you-should-know/ "
+    }
+]
+
 export const dashnav = [ 
     {
         name: "Dashboard"
