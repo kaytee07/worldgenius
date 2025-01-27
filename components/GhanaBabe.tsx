@@ -10,16 +10,7 @@ const staatliches = Staatliches({
     weight: ['400'],
 });
 
-interface Product {
-    id: number;
-    name: string;
-    price: number;
-    img: string;
-    sizes: { name: string; quantity: number }[];
-    colors: { name: string; code: string }[];
-    quantity: number;
-    otherImages: string[];
-}
+
 
 
 
