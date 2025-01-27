@@ -1,13 +1,7 @@
 "use client"
 import { products } from '@/data'
 import React, { useEffect } from 'react'
-import { Lexend_Giga } from '@next/font/google';
 
-
-const lexendGiga = Lexend_Giga({
-    subsets: ['latin'],  // You can add more subsets if needed
-    weight: ['400', '500', '600'],  // You can add or remove weights you need
-});
 
 interface Product {
     id: number;
@@ -38,7 +32,7 @@ const Allitems = () => {
         
       }, [])
   return (
-      <ul className={`grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw] font-bold ${lexendGiga.className}`}>
+      <ul className={`grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw] font-bold`}>
     {
             Object.keys(allproducts).map((item: string,index)=> (
                 <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200">

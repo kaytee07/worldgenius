@@ -67,12 +67,16 @@ export const products = {
         quantity: 7,
         otherImages: []
     },
-     gtaaccrashirtcream:{
+     gtatopcream:{
         id: 0,
-        name: "GTA ACCRA SHIRT CREAM",
+        name: "GTA TOP CREAM",
         price: 250.00,
         img: "/img/gtacream.jpg",
         sizes: [
+                       {
+                name: "S",
+                quantity: 90
+            },
             {
                 name: "M",
                 quantity: 30
@@ -100,12 +104,16 @@ export const products = {
         quantity: 8,
         otherImages: []
     },
-    gtaaccrashirtgrey:{
+    gtatopgrey:{
         id: 0,
-        name: "GTA ACCRA SHIRT GREY",
+        name: "GTA TOP GREY",
         price: 250.00,
         img: "/img/gtagrey.jpg",
         sizes: [
+                       {
+                name: "S",
+                quantity: 90
+            },
             {
                 name: "M",
                 quantity: 30
@@ -132,12 +140,16 @@ export const products = {
         quantity: 8,
         otherImages: []
     },
-      gtaaccrashirtwhite:{
+      gtatopwhite:{
         id: 0,
-        name: "GTA ACCRA SHIRT WHITE",
+        name: "GTA TOP WHITE",
         price: 250.00,
         img: "/img/gtawhite.jpg",
         sizes: [
+                       {
+                name: "S",
+                quantity: 90
+            },
             {
                 name: "M",
                 quantity: 30
@@ -165,13 +177,16 @@ export const products = {
         otherImages: []
     },
      
-      gtaaccrashirtblack:{
+      gtatopblack:{
         id: 0,
-        name: "GTA ACCRA SHIRT BLACK",
+        name: "GTA TOP BLACK",
         price: 250.00,
         img: "/img/gtablack.jpg",
         sizes: [
-                  ,
+                       {
+                name: "S",
+                quantity: 90
+            },
             {
                 name: "M",
                 quantity: 30
@@ -309,13 +324,12 @@ export const products = {
         quantity: 7,
         otherImages: []
     },
-    accrawedey:{
+    accrawedeyshirt:{
         id: 2,
-        name: "ACCRA WE DEY",
+        name: "ACCRA WE DEY SHIRT",
         price: 200.00,
         img: "/img/419front.jpg",
         sizes: [
-                     
             {
                 name: "M",
                 quantity: 30

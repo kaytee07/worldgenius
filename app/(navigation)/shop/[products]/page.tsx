@@ -2,21 +2,9 @@
 import { products } from '@/data'
 import Image from 'next/image'
 import React, {useState, useEffect} from 'react'
-import { Oswald } from 'next/font/google';
-import { Lexend_Giga } from '@next/font/google';
 
 
 
-const lexendGiga = Lexend_Giga({
-    subsets: ['latin'],  // You can add more subsets if needed
-    weight: ['400', '500', '600'],  // You can add or remove weights you need
-});
-
-
-const oswald = Oswald({
-  weight: ['400', '700'], // Specify the weights you want
-  subsets: ['latin'], // You can specify other subsets if needed
-});
 
 
 
@@ -121,16 +109,16 @@ const Products: React.FC<ProductProps> = ({params}) => {
         </div>
         <div>
             <div className="name-price">
-                <h3 className={`${lexendGiga.className} text-md font-bold`}>{Products.name}</h3>
+                <h3 className={`text-md font-bold`}>{Products.name}</h3>
                 <h2 className='py-3 text-red-500 font-bold text-lg'>Ghc {Products.price}.00</h2>
             </div>
                       <div className="size-checkout">
-                          <h1 className={`font-bold ${lexendGiga.className}`}>size</h1>
+                          <h1 className={`font-bold`}>size</h1>
                           <div className="allSizes flex gap-5">
                               {
                                   Products.sizes.map((item, index) => (
                                       <button style={{ backgroundColor: `#${item.name === size ? `ef4444` : 'ffffff'}` }}
- onClick={() => handleAttributeChange('size', item.name) } className={`${lexendGiga.className} w-20 h-10 rounded-sm border-[1px] border-[#e6e6e6]`} key={index}>
+ onClick={() => handleAttributeChange('size', item.name) } className={`w-20 h-10 rounded-sm border-[1px] border-[#e6e6e6]`} key={index}>
                                           {item.name}
                                       </button>
                                   ))
@@ -144,7 +132,7 @@ const Products: React.FC<ProductProps> = ({params}) => {
                 <input type="number" name="quantity" id="quantity" />
             </div> */}
             <div className="pay">
-                <button onClick={addToCart} className={`w-36 my-7 text-lg bg-black text-white h-10 rounded-sm ${lexendGiga.className}`}>add to bag</button>
+                <button onClick={addToCart} className={`w-36 my-7 text-lg bg-black text-white h-10 rounded-sm`}>add to bag</button>
             </div>
         </div>
       </div>

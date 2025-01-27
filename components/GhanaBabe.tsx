@@ -3,18 +3,7 @@ import { products } from '@/data'
 import React, { useEffect } from 'react'
 import { Staatliches } from 'next/font/google';
 import { useSearchParams } from 'next/navigation'
-import { Lexend_Giga } from '@next/font/google';
 
-
-// const poppins = Poppins({
-//     subsets: ['latin'],
-//     weight: ['400', '600', '700'],  // You can add the weights you need
-// });
-
-const lexendGiga = Lexend_Giga({
-    subsets: ['latin'],  // You can add more subsets if needed
-    weight: ['400', '500', '600'],  // You can add or remove weights you need
-});
 
 const staatliches = Staatliches({
     subsets: ['latin'],
@@ -69,7 +58,7 @@ const NewArrivals = () => {
                 <div className={`flex  py-6 ${staatliches.className}`}>
                     <h1 className='text-black text-4xl font-semibold tracking-wide'>BEST SELLING</h1>
                 </div>
-                <ul className={`grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw] font-bold ${lexendGiga.className}`}>
+                <ul className={`grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 place-items-center w-[93vw] font-bold`}>
                     {
                         Object.keys(allproducts).reverse().slice(1, 5).map((item: string, index) => (
                             

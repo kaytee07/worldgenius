@@ -2,14 +2,6 @@
 import { products } from '@/data'
 import React from 'react'
 import { Staatliches } from 'next/font/google';
-import { Lexend_Giga } from '@next/font/google';
-
-
-
-const lexendGiga = Lexend_Giga({
-    subsets: ['latin'],  // You can add more subsets if needed
-    weight: ['400', '500', '600'],  // You can add or remove weights you need
-});
 
 
 
@@ -53,7 +45,7 @@ const NewArrivals = () => {
     {
         Object.keys(allproducts).slice(3, 7).map((item: string,index)=> (
             
-            <li key={index} className={`cursor relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200 font-bold ${lexendGiga.className}`}>
+            <li key={index} className={`cursor relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200 font-bold`}>
             <div className="relative overflow-hidden bg-clip-border">
                 <img
                         src={`${products[item as keyof typeof products].img}`}

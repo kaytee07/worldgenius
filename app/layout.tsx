@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <link rel="icon" href="/favicon.ico" />
       
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body style={{ fontFamily: 'Helvetica, Arial, sans-serif' }}>{children}</body>
     </html>
   );
 }
