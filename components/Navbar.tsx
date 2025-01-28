@@ -45,19 +45,16 @@ const Navbar = () => {
         </div>
         <nav 
         className="flex justify-between h-[1rem] text-sm font-md md:w-[14rem] max-md:gap-5">
-            <ul 
-            className='flex flex-row justify-between items-center max-md:hidden' 
-            style={{"width": "40rem"}}>
-                {navigation.map((data, i) => (
-                    <a key={i} className="" href={data.url}>
-                        <li className="navitems flex " >{data.name}</li>
-                    </a>
-                )
-                )}
-            
+                  <ul
+                      className='flex flex-row justify-between items-center max-md:hidden'
+                      style={{ "width": "40rem" }}>
+                      {navigation.map((data, i) => (
+                          <li key={i} className="navitems flex">
+                              <a className="" href={data.url}>{data.name}</a>
+                          </li>
+                      ))}
                       <SheetDemoCart data={cartItems} />
-                  
-            </ul>
+                  </ul>
             <div>
 
             </div>
