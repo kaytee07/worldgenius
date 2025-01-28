@@ -244,11 +244,11 @@ export const products = {
         img: "/img/gtacream.jpg",
         sizes: [
                        {
-                name: "S",
+                name: "M",
                 quantity: 90
             },
             {
-                name: "M",
+                name: "L",
                 quantity: 30
             },
             {
@@ -281,11 +281,11 @@ export const products = {
         img: "/img/gtagrey.jpg",
         sizes: [
                        {
-                name: "S",
+                name: "M",
                 quantity: 90
             },
             {
-                name: "M",
+                name: "L",
                 quantity: 30
             },
             {
@@ -315,13 +315,13 @@ export const products = {
         name: "GTA ACCRA SHIRT WHITE",
         price: 250.00,
         img: "/img/gtawhite.jpg",
-        sizes: [
+         sizes: [
                        {
-                name: "S",
+                name: "M",
                 quantity: 90
             },
             {
-                name: "M",
+                name: "L",
                 quantity: 30
             },
             {
@@ -347,18 +347,18 @@ export const products = {
         otherImages: ["/img/gtawhite.jpg"]
     },
      
-      gtatopblack:{
+      gtaaccrashirtblack:{
         id: 0,
-        name: "GTA TOP BLACK",
+        name: "GTA ACCRA SHIRT BLACK",
         price: 250.00,
         img: "/img/gtablack.jpg",
-        sizes: [
+         sizes: [
                        {
-                name: "S",
+                name: "M",
                 quantity: 90
             },
             {
-                name: "M",
+                name: "L",
                 quantity: 30
             },
             {
@@ -455,10 +455,7 @@ export const products = {
         price: 200.00,
         img: "/img/ghanaboysblack.jpg",
         sizes: [
-                       {
-                name: "S",
-                quantity: 90
-            },
+                
             {
                 name: "M",
                 quantity: 30
