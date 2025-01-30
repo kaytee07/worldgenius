@@ -156,7 +156,7 @@ export const bestSelling = {
     },
     dndtrackercap:{
         id: 1,
-        name: "DND TRACKER CAP",
+        name: "DND TRUCKER CAP",
         price: 100.00,
         img: "/img/dndcap.jpg",
         sizes: [
