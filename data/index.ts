@@ -205,7 +205,7 @@ export const products = {
         id:4,
         name: "GHANA BABE CROPTOP",
         price: 200.00,
-        img: "/img/ghanababe.jpg",
+        img: "/img/ghanababenew.png",
         sizes: [
             {
                 name: "S(2-4)",
