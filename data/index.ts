@@ -76,7 +76,7 @@ export const bestSelling = {
     ineedspacetops:{
         id: 2,
         name: "I NEED SPACE TOPS",
-        price: 200.00,
+        price: 1.00,
         img: "/img/ineedspace.jpg",
         sizes: [
                        {
