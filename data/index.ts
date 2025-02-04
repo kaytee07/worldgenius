@@ -449,7 +449,7 @@ export const products = {
         quantity: 7,
         otherImages: ["/img/dndcap.jpg"]
     },
-        topoftheworldcapseablue:{
+        topoftheworldtruckercapseablue:{
         id: 1,
         name: "TOP OF THE WORLD TRUCKER CAP SEA BLUE",
         price: 100.00,
@@ -471,7 +471,7 @@ export const products = {
         quantity: 7,
         otherImages: []
     },
-    topoftheworldcapblackandwhite:{
+    topoftheworldtruckercapblackandwhite:{
         id: 1,
         name: "TOP OF THE WORLD TRUCKER CAP BLACK AND WHITE",
         price: 100.00,
