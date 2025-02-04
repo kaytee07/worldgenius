@@ -172,7 +172,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
        }
 
 
-        if (!email || !address || !number || !city || selectedCountry) {
+        if (!email || !address || !number || !city || !selectedCountry) {
             alert('Please fill out all required fields: email, address, and number.');
             return;
         }
