@@ -451,7 +451,7 @@ export const products = {
     },
         topoftheworldcapseablue:{
         id: 1,
-        name: "TOP OF THE WORLD CAP SEA BLUE",
+        name: "TOP OF THE WORLD TRUCKER CAP SEA BLUE",
         price: 100.00,
         img: "/img/topoftheworldseablue.png",
         sizes: [
@@ -473,7 +473,7 @@ export const products = {
     },
     topoftheworldcapblackandwhite:{
         id: 1,
-        name: "TOP OF THE WORLD CAP BLACK AND WHITE",
+        name: "TOP OF THE WORLD TRUCKER CAP BLACK AND WHITE",
         price: 100.00,
         img: "/img/topoftheworldblackandwhite.png",
         sizes: [
@@ -582,10 +582,6 @@ export const products = {
         price: 200.00,
         img: "/img/ineedspace.jpg",
         sizes: [
-                       {
-                name: "S",
-                quantity: 90
-            },
             {
                 name: "M",
                 quantity: 30
