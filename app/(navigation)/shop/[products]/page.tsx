@@ -102,7 +102,7 @@ const Products: React.FC<ProductProps> = ({params}) => {
         setTempItem((prevItem) => ({ ...prevItem, 'id': Products.id, 'name': Products.name, 'price': Products.price, 'originalPrice': Products.price, color: Products.colors[0].name }))
     }, [])
   return (
-    <div className='py-11 max-sm:flex max-sm:justify-center p-5'>
+    <div className='py-11 max-sm:flex max-sm:justify-center p-5 md:mb-28'>
       <div className=" flex max-sm:flex-col justify-center gap-16 w-full">
               <Carousel className='md:mr-16 md:mb-40'>
                   <CarouselContent>
@@ -131,7 +131,7 @@ const Products: React.FC<ProductProps> = ({params}) => {
                               {
                                   Products.sizes.map((item, index) => (
                                       <button style={{ backgroundColor: `#${item.name === size ? `ef4444` : 'ffffff'}` }}
- onClick={() => handleAttributeChange('size', item.name) } className={`w-20 h-10 rounded-sm border-[1px] border-[#e6e6e6]`} key={index}>
+ onClick={() => handleAttributeChange('size', item.name) } className={`w-20 h-fit rounded-sm border-[1px] border-[#e6e6e6]`} key={index}>
                                           {item.name}
                                       </button>
                                   ))

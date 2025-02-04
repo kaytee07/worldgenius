@@ -14,14 +14,14 @@ const Gallery = () => {
               <div>
                   <img
                       className="h-auto max-w-full rounded-lg object-cover object-center "
-                      src="/img/ghanababepotrait1.jpg"
+                      src="/img/p4.jpeg"
                       alt="gallery-photo"
                   />
               </div>
               <div>
                   <img
                       className="h-auto max-w-full rounded-lg object-cover object-center"
-                      src="/img/awdpotrait1.jpg"
+                      src="/img/p1.jpeg"
                       alt="gallery-photo"
                   />
               </div>
@@ -37,7 +37,7 @@ const Gallery = () => {
               <div>
                   <img
                       className="h-auto max-w-full rounded-lg object-cover object-center"
-                      src="/img/insp1.jpg"
+                      src="/img/p2.jpeg"
                       alt="gallery-photo"
                   />
               </div>
@@ -53,7 +53,7 @@ const Gallery = () => {
               <div>
                   <img
                       className="h-auto max-w-full rounded-lg object-cover object-center"
-                      src="/img/insp3.jpgimg/ghanababepotrait3.jpg"
+                      src="/img/p10.jpg"
                       alt="gallery-photo"
                   />
               </div>
@@ -67,7 +67,7 @@ const Gallery = () => {
               <div>
                   <img
                       className="h-auto max-w-full rounded-lg object-cover object-center"
-                      src="/img/dndls1.jpg"
+                      src="/img/p7.jpeg"
                       alt="gallery-photo"
                   />
               </div>
@@ -76,7 +76,7 @@ const Gallery = () => {
               <div>
                   <img
                       className="h-auto max-w-full rounded-lg object-cover object-center"
-                      src="/img/topwp1.jpg"
+                      src="/img/p3.jpeg"
                       alt="gallery-photo"
                   />
               </div>
@@ -84,7 +84,7 @@ const Gallery = () => {
             
                       <img
                       className="h-auto max-w-full rounded-lg object-cover object-center"
-                      src="/img/wgp1.jpg"
+                      src="/img/p8.jpeg"
                       alt="gallery-photo"
                   />
                   

@@ -154,7 +154,7 @@ export const bestSelling = {
         quantity: 7,
         otherImages: []
     },
-    dndtrackercap:{
+    dndtruckercap:{
         id: 1,
         name: "DND TRUCKER CAP",
         price: 100.00,
@@ -208,23 +208,27 @@ export const products = {
         img: "/img/ghanababe.jpg",
         sizes: [
             {
-                name: "S",
+                name: "S(2-4)",
                 quantity: 90
             },
             {
-                name: "M",
+                name: "M(6-8)",
                 quantity: 30
             },
             {
-                name: "XL",
+                name: "L(10-12)",
                 quantity: 55
             },
             {
-                name: "2XL",
+                name: "XL(14-16)",
                 quantity: 55
             },
              {
-                name: "3XL",
+                name: "2XL(18)",
+                quantity: 55
+            },
+            {
+                name: "3XL(20-22)",
                 quantity: 55
             }
         ],
@@ -383,9 +387,49 @@ export const products = {
         quantity: 8,
         otherImages: ["/img/gtablack.jpg"]
     },
-    dndtrackercap:{
+    boneshakerwhiteshirt:{
+        id: 0,
+        name: "BONE SHAKER WHITE SHIRT",
+        price: 250.00,
+        img: "/img/boneshakerteeshirt.png",
+         sizes: [
+                       {
+                name: "M",
+                quantity: 90
+            },
+            {
+                name: "L",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+             {
+                name: "3XL",
+                quantity: 55
+            },
+            {
+                name: "4XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "Black",
+                code: "000000"
+            }
+        ],
+        quantity: 8,
+        otherImages: ["/img/boneshakerteeshirt.png"]
+    },
+    dndtruckercap:{
         id: 1,
-        name: "DND TRACKER CAP",
+        name: "DND TRUCKER CAP",
         price: 100.00,
         img: "/img/dndcap.jpg",
         sizes: [

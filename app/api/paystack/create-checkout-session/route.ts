@@ -56,8 +56,11 @@ export async function POST(req: Request) {
                 }
                
             )
-
+        
+       
+            
             const authorizationUrl = response.data.data.authorization_url;
+            
 
             return new Response(JSON.stringify({ authorizationUrl }), { status: 200 });
             

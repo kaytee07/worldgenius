@@ -6,7 +6,7 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
-
+import { Spinner } from "react-spinner-toolkit";
 import { Trash } from "lucide-react";
 
 
@@ -50,6 +50,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
     const [email, setEmail] = useState<string>('');
     const [number, setNumber] = useState<string>('');
     const [address, setAddress] = useState<string>('');
+    const [loader, setLoader] = useState(false);
     // const { isSignedIn, user } = useUser();
 
     
@@ -152,10 +153,13 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
         return;
        }
 
+
         if (!email || !address || !number) {
             alert('Please fill out all required fields: email, address, and number.');
             return;
         }
+
+        setLoader(!loader)
 
         const total = Object.keys(cart).reduce((total, priceKey) => {
             return total + data[priceKey].price;
@@ -183,12 +187,15 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
             if (data.authorizationUrl) {
                 window.location.href = data.authorizationUrl;
             } else {
+                
                 console.error('Error: No authorization URL received');
-                alert('An error occurred. Please try again.');
+                setLoader(false)
+                alert('check if details provided are correct');
             }
 
             console.log(data)
         } catch (error){
+            setLoader(!false)
             console.log(error)
         }
 
@@ -211,7 +218,10 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
 
             </SheetTrigger>
             <SheetContent className="overflow-y-scroll">
-                <SheetHeader>
+                {
+                    loader ? <div className="h-full flex items-center justify-center"><Spinner shape="circle" color="#000000" loading speed={1} size={50} /></div> : (
+                        <>
+                        <SheetHeader>
                     <SheetTitle>
                         <Link href="/">
                             {/* <Image src="/logos/Logo.png" width={100} height={40} alt="logo"/> */}
@@ -290,6 +300,10 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
                     
                 
                 </div>
+                        </>
+                    )
+                }
+                
             </SheetContent>
         </Sheet>
     )
