@@ -7,7 +7,7 @@ const Gallery = () => {
               <div>
                   <img
                       className="h-auto max-w-full rounded-lg object-cover object-center"
-                      src="/img/ghanaboyls1.jpg"
+                      src="/img/p6.jpeg"
                       alt="gallery-photo"
                   />
               </div>
@@ -53,7 +53,7 @@ const Gallery = () => {
               <div>
                   <img
                       className="h-auto max-w-full rounded-lg object-cover object-center"
-                      src="/img/p10.jpg"
+                      src="/img/p9.JPG"
                       alt="gallery-photo"
                   />
               </div>
