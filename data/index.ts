@@ -390,7 +390,7 @@ export const products = {
     boneshakerwhiteshirt:{
         id: 0,
         name: "BONE SHAKER WHITE SHIRT",
-        price: 250.00,
+        price: 220.00,
         img: "/img/boneshakerteeshirt.png",
          sizes: [
                        {

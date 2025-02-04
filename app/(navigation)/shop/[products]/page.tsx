@@ -131,7 +131,7 @@ const Products: React.FC<ProductProps> = ({params}) => {
                               {
                                   Products.sizes.map((item, index) => (
                                       <button style={{ backgroundColor: `#${item.name === size ? `ef4444` : 'ffffff'}` }}
- onClick={() => handleAttributeChange('size', item.name) } className={`w-20 h-fit rounded-sm border-[1px] border-[#e6e6e6]`} key={index}>
+ onClick={() => handleAttributeChange('size', item.name) } className={`w-fit pl-2 pr-2 h-10 rounded-sm border-[1px] border-[#e6e6e6]`} key={index}>
                                           {item.name}
                                       </button>
                                   ))
