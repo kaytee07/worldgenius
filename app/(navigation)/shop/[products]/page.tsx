@@ -127,7 +127,7 @@ const Products: React.FC<ProductProps> = ({params}) => {
             </div>
                       <div className="size-checkout">
                           <h1 className={`font-bold`}>size</h1>
-                          <div className="allSizes flex gap-5">
+                          <div className="allSizes flex gap-5 flex-wrap">
                               {
                                   Products.sizes.map((item, index) => (
                                       <button style={{ backgroundColor: `#${item.name === size ? `ef4444` : 'ffffff'}` }}
