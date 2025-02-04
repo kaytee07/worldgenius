@@ -579,7 +579,7 @@ export const products = {
     ineedspacetops:{
         id: 2,
         name: "I NEED SPACE TOPS",
-        price: 1.00,
+        price: 200.00,
         img: "/img/ineedspace.jpg",
         sizes: [
             {

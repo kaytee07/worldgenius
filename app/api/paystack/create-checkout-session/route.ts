@@ -53,7 +53,7 @@ export async function POST(req: Request) {
                         email: email,
                         number: number,
                         address: address,
-                        country: country || 'Ghana',
+                        country: country.label || 'Ghana',
                         city: city
                      }
                 }, 
