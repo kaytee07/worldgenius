@@ -40,7 +40,7 @@ interface OrderObject {
     address: string,
     number: string,
     total: number,
-    country: string | null,
+    country: CountryOption | null,
     city: string,
     products: ItemObject[]
 }
@@ -172,7 +172,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
        }
 
 
-        if (!email || !address || !number || !city || !selectedCountry) {
+        if (!email || !address || !number) {
             alert('Please fill out all required fields: email, address, and number.');
             return;
         }
@@ -190,7 +190,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
             number,
             total,
             city,
-            country: selectedCountry.label,
+            country: selectedCountry,
             products: cartItems
         }
 

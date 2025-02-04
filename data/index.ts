@@ -390,7 +390,7 @@ export const products = {
     boneshakerwhiteshirt:{
         id: 0,
         name: "BONE SHAKER WHITE SHIRT",
-        price: 220.00,
+        price: 5.00,
         img: "/img/boneshakerteeshirt.png",
          sizes: [
                        {
@@ -533,7 +533,7 @@ export const products = {
            
         ],
         quantity: 7,
-        otherImages: ["ghanaboysblack.jpg"]
+        otherImages: ["/img/ghanaboysblack.jpg"]
     },
     accrawedeyshirt:{
         id: 2,
