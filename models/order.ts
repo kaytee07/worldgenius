@@ -5,6 +5,8 @@ const orderSchema = new Schema({
     reference: {type: String},
     email: { type: String, required: true },
     address: { type: String, required: true },
+    country: { type: String, required: true },
+    city: { type: String, required: true },
     number: { type: String, required: true },
     total: { type: Number, required: true },
     delivery_status: {type: String, default: 'pending'},

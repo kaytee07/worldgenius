@@ -16,6 +16,8 @@ interface Product {
 interface OrderItem {
     email: string;
     number: number;
+    country: string;
+    city: string;
     _id: string;
     reference: string;
     total: number;
@@ -97,6 +99,8 @@ const Order = () => {
                                     <div>
                                         <h3 className="text-lg font-medium text-gray-900">{order.email}</h3>
                                         <p className="text-sm text-gray-500 mt-1">number: {order.number}</p>
+                                        <p className="text-sm text-gray-500 mt-1">number: {order.country}</p>
+                                        <p className="text-sm text-gray-500 mt-1">number: {order.city}</p>
                                         <p className="text-sm text-gray-500 mt-1">Ref: {order.reference}</p>
                                     </div>
 

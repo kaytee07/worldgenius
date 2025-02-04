@@ -34,6 +34,7 @@ export async function POST(req: Request) {
                     address:jsonData.data.metadata.address,
                     number: jsonData.data.metadata.number,
                     country: jsonData.data.metadata.country,
+                    city: jsonData.data.metadata.city,
                     reference: jsonData.data.reference,
                     cartItems: jsonData.data.metadata.products,
                     total: jsonData.data.requested_amount,

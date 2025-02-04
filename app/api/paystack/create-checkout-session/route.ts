@@ -12,7 +12,13 @@ interface ItemObject  {
     color: string;
     size: string;
     quantity: number;
+    country: CountryOption | null;
 }
+
+type CountryOption = {
+    value: string;
+    label: string;
+};
 
 
 export async function POST(req: Request) {
@@ -24,7 +30,8 @@ export async function POST(req: Request) {
             products,
             total,
             address, 
-            country} = await req.json();
+            country,
+            city} = await req.json();
 
             const formattedProducts = products.map((product: ItemObject) => ({
                 name: product.name,
@@ -47,6 +54,7 @@ export async function POST(req: Request) {
                         number: number,
                         address: address,
                         country: country || 'Ghana',
+                        city: city
                      }
                 }, 
                 {

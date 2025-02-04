@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/sheet"
 import { Spinner } from "react-spinner-toolkit";
 import { Trash } from "lucide-react";
+import Select from "react-select";
+import { getNames, getCode } from "country-list";
 
 
 import Link from "next/link"
@@ -38,8 +40,15 @@ interface OrderObject {
     address: string,
     number: string,
     total: number,
+    country: CountryOption | null,
+    city: string,
     products: ItemObject[]
 }
+
+type CountryOption = {
+    value: string;
+    label: string;
+};
 
 
 
@@ -50,7 +59,16 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
     const [email, setEmail] = useState<string>('');
     const [number, setNumber] = useState<string>('');
     const [address, setAddress] = useState<string>('');
+    const [city, setCity] = useState<string>('');
     const [loader, setLoader] = useState(false);
+    const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(null);
+
+
+    const countryOptions: CountryOption[] = getNames().map((name) => ({
+        value: getCode(name) ?? name, // If getCode(name) is undefined, use name instead
+        label: name,
+    }));
+
     // const { isSignedIn, user } = useUser();
 
     
@@ -154,7 +172,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
        }
 
 
-        if (!email || !address || !number) {
+        if (!email || !address || !number || !city || selectedCountry) {
             alert('Please fill out all required fields: email, address, and number.');
             return;
         }
@@ -171,6 +189,8 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
             address,
             number,
             total,
+            city,
+            country: selectedCountry,
             products: cartItems
         }
 
@@ -273,12 +293,26 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
                 </div>
                 <div className="total">
                     <div className="flex flex-col">
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Email</label>
                     <input className="p-5 border-[1px] border-black h-10 rounded-lg" value={email} type="email" name="" id="email" onChange={(e) => setEmail(e.target.value)} required/>
-                    <label htmlFor="address">Address</label>
+                    <label htmlFor="address" className="block mb-2 text-sm font-medium text-gray-900">Address</label>
                     <input className="p-5 border-[1px] border-black h-10 rounded-lg" value={address} type="" name="" id="address" onChange={(e) => setAddress(e.target.value)} required/>
-                    <label htmlFor="number">Phone Number</label>
+                    <label htmlFor="number" className="block mb-2 text-sm font-medium text-gray-900">Phone Number</label>
                     <input className="p-5 border-[1px] border-black h-10 rounded-lg" value={number} type="" name="" id="number" onChange={(e) => setNumber(e.target.value)} required/>
+                    <label htmlFor="city" className="block mb-2 text-sm font-medium text-gray-900">City</label>
+                    <input className="p-5 border-[1px] border-black h-10 rounded-lg" value={city} type="" name="" id="number" onChange={(e) => setCity(e.target.value)} required />
+                                    <label className="block mb-2 text-sm font-medium text-gray-900">
+                                        Select your country
+                                    </label>
+                                    <Select
+                                        options={countryOptions}
+                                        value={selectedCountry}
+                                        onChange={setSelectedCountry}
+                                        className="w-full"
+                                    />
+                                    {selectedCountry && (
+                                        <p className="mt-2 text-gray-700">You selected: {selectedCountry.label} ({selectedCountry.value})</p>
+                                    )}
                     
                     </div>
                     <div className="all flex gap-2 flex-col mt-5">
