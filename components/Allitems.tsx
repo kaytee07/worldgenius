@@ -32,7 +32,7 @@ const Allitems = () => {
         
       }, [])
   return (
-      <ul className={`grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 w-[93vw] font-bold`}>
+      <ul className={`grid grid-cols-2 gap-4 max-sm:gap-[5px] pt-3 pb-3 sm:grid-cols-3 lg:grid-cols-4 w-[93vw] font-bold`}>
     {
             Object.keys(allproducts).map((item: string,index)=> (
                 <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200">
@@ -40,7 +40,7 @@ const Allitems = () => {
                     <img
                             src={`${products[item as keyof typeof products].img}`}
                     alt="card-image"
-                    className="h-full w-full "
+                    className=" w-full "
                     />
                 </div>
                 <div className="p-4">
