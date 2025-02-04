@@ -469,7 +469,7 @@ export const products = {
            
         ],
         quantity: 7,
-        otherImages: []
+        otherImages: ["/img/topoftheworldseablue.png"]
     },
     topoftheworldtruckercapblackandwhite:{
         id: 1,
