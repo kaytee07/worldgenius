@@ -40,7 +40,7 @@ interface OrderObject {
     address: string,
     number: string,
     total: number,
-    country: CountryOption | null,
+    country: string | null,
     city: string,
     products: ItemObject[]
 }
@@ -190,7 +190,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
             number,
             total,
             city,
-            country: selectedCountry,
+            country: selectedCountry.label,
             products: cartItems
         }
 
