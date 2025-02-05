@@ -20,6 +20,20 @@ const Gallery = () => {
               </div>
               <div>
                   <img
+                      className="h-auto max-w-full rounded-lg object-cover object-center "
+                      src="/img/p13.jpeg"
+                      alt="gallery-photo"
+                  />
+              </div>
+              <div>
+                  <img
+                      className="h-auto max-w-full rounded-lg object-cover object-center "
+                      src="/img/p14.jpeg"
+                      alt="gallery-photo"
+                  />
+              </div>
+              <div>
+                  <img
                       className="h-auto max-w-full rounded-lg object-cover object-center"
                       src="/img/p1.jpeg"
                       alt="gallery-photo"
@@ -48,12 +62,40 @@ const Gallery = () => {
                       alt="gallery-photo"
                   />
               </div>
+              <div>
+                  <img
+                      className="h-auto max-w-full rounded-lg object-cover object-center"
+                      src="/img/p11.jpeg"
+                      alt="gallery-photo"
+                  />
+              </div>
+              <div>
+                  <img
+                      className="h-auto max-w-full rounded-lg object-cover object-center"
+                      src="/img/p18.jpeg"
+                      alt="gallery-photo"
+                  />
+              </div>
+              <div>
+                  <img
+                      className="h-auto max-w-full rounded-lg object-cover object-center"
+                      src="/img/p12.jpeg"
+                      alt="gallery-photo"
+                  />
+              </div>
           </div>
           <div className="grid gap-4">
               <div>
                   <img
                       className="h-auto max-w-full rounded-lg object-cover object-center"
                       src="/img/p9.JPG"
+                      alt="gallery-photo"
+                  />
+              </div>
+              <div>
+                  <img
+                      className="h-auto max-w-full rounded-lg object-cover object-center"
+                      src="/img/p17.jpeg"
                       alt="gallery-photo"
                   />
               </div>
@@ -68,6 +110,20 @@ const Gallery = () => {
                   <img
                       className="h-auto max-w-full rounded-lg object-cover object-center"
                       src="/img/p7.jpeg"
+                      alt="gallery-photo"
+                  />
+              </div>
+              <div>
+                  <img
+                      className="h-auto max-w-full rounded-lg object-cover object-center"
+                      src="/img/p15.jpeg"
+                      alt="gallery-photo"
+                  />
+              </div>
+              <div>
+                  <img
+                      className="h-auto max-w-full rounded-lg object-cover object-center"
+                      src="/img/p16.jpeg"
                       alt="gallery-photo"
                   />
               </div>

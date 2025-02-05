@@ -46,7 +46,7 @@ export async function POST(req: Request) {
                 'https://api.paystack.co/transaction/initialize',
                 {
                      email: email,
-                     callback_url: "https://www.worldg3nius.com/",
+                     callback_url: "http://localhost:3000/",
                      amount: total * 100,
                      metadata: {
                         products: formattedProducts,

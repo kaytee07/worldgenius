@@ -12,6 +12,7 @@ import { Order } from '@/models/order';
 export async function POST(req: Request) {
     const body = await req.text();
     const secret: string | undefined = process.env.PAYSTACK_SECRET_KEY;
+    console.log(body)
 
     try{
         await connectToDB()
@@ -23,7 +24,7 @@ export async function POST(req: Request) {
             .digest('hex');
         }
         
-
+        console.log(hash, req.headers.get('x-paystack-signature'))
         if (hash === req.headers.get('x-paystack-signature')){
             const jsonData = JSON.parse(body);
             const event = jsonData.event;
