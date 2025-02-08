@@ -61,9 +61,13 @@ const NewArrivals = () => {
                 <ul className={`grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 w-[93vw] font-bold`}>
                     {
                         Object.keys(bestSelling).slice(0, 4).map((item: string, index) => (
-                            
                             <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200">
+                               
                                 <div className="relative overflow-hidden bg-clip-border">
+                                    {index === 2 ? <div className="relative">
+                                        <img className="absolute max-sm:left-20 max-sm:h-32 max-sm:w-32 left-28 h-44 w-44" src="/img/25tag.png" alt="tag" />
+                                    </div> : ""}
+                                    
                                     <img
                                         src={`${products[item as keyof typeof products].img}`}
                                         alt="card-image"
@@ -75,8 +79,15 @@ const NewArrivals = () => {
                                         <p className="text-slate-800 text-md">
                                             {truncateString(products[item as keyof typeof products].name, 10)}
                                         </p>
-                                        <p className="text-black text-md font-semibold">
-                                            ₵{products[item as keyof typeof products].price}
+                                        <p className={`text-black text-md font-semibold`}>
+                                            {
+                                                index === 2 ? <span className="line-through mr-2 text-red-600">₵{products[item as keyof typeof products].price}</span> : <span>₵{products[item as keyof typeof products].price}</span>
+                                            }
+
+                                            {
+                                                index === 2 ? <span className="">₵{products[item as keyof typeof products].price * (100 - 25)/100 }</span> : ""
+                                            }
+                                            
                                         </p>
                                     </div>
                                     <a href={`/shop/${products[item as keyof typeof products].name.replace(/\s+/g, '').toLowerCase()}`}>

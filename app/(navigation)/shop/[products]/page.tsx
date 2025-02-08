@@ -123,7 +123,10 @@ const Products: React.FC<ProductProps> = ({params}) => {
         <div>
             <div className="name-price">
                 <h3 className={`text-md font-bold`}>{Products.name}</h3>
-                <h2 className='py-3 text-red-500 font-bold text-lg'>Ghc {Products.price}.00</h2>
+                {
+                          Products.name === "GHANA BABE CROPTOP" ? <h2 className='py-3 text-red-500 font-bold text-lg'>Ghc {Products.price * (100 - 25)/100}.00</h2>: <h2 className='py-3 text-red-500 font-bold text-lg'>Ghc {Products.price}.00</h2>
+                }
+                
             </div>
                       <div className="size-checkout">
                           <h1 className={`font-bold`}>size</h1>
