@@ -83,7 +83,6 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
     useEffect(() => {
         const itemsArray =  Object.keys(cart).map((key) => cart[key]);
         setCartItems(itemsArray);
-        console.log(cartItems)
         
     }, [cart])
 
@@ -265,8 +264,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
                                             </div>
                                             <div className="info w-40 flex flex-col">
                                             <p>{items.name}</p>
-                                            {items.name === "GHANA BABE CROPTOP" ? <p className="font-bold">{items.price * (100 - 25)/100}.00</p> : <p className="font-bold">{items.price.toFixed(2)}</p>}
-                                            
+                                            <p className="font-bold">{items.price.toFixed(2)}</p>
                                             <div className="flex gap-6">
                                                 <p>
                                                     {items.color}
