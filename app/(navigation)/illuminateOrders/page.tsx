@@ -102,7 +102,7 @@ const Order = () => {
                                         <p className="text-sm text-gray-500 mt-1">number: {order.number}</p>
                                         <p className="text-sm text-gray-500 mt-1">country: {order.country}</p>
                                         <p className="text-sm text-gray-500 mt-1">city: {order.city}</p>
-                                        <p className="text-sm text-gray-500 mt-1">city: {order.address}</p>
+                                        <p className="text-sm text-gray-500 mt-1">address: {order.address}</p>
                                         <p className="text-sm text-gray-500 mt-1">Ref: {order.reference}</p>
                                     </div>
 
