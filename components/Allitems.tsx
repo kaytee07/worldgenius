@@ -53,11 +53,11 @@ const Allitems = () => {
                     </p>
                     <p className={`text-black text-md font-semibold`}>
                         {
-                            index === 0 ? <span className="line-through mr-2 text-red-600">₵{products[item as keyof typeof products].price}</span> : <span>₵{products[item as keyof typeof products].price}</span>
-                        }
+                            index === 0 ? <span className="line-through mr-2 text-red-600">₵200.00</span> : <span>₵{products[item as keyof typeof products].price}</span>
+                        }                        
                     
                         {
-                            index === 0 ? <span className="">₵{products[item as keyof typeof products].price * (100 - 25)/100 }</span> : ""
+                            index === 0 ? <span className="">₵{products[item as keyof typeof products].price}</span> : ""
                         }
                                                                 
                     </p>
