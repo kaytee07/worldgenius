@@ -81,20 +81,28 @@ const NewArrivals = () => {
                                         </p>
                                         <p className={`text-black text-md font-semibold`}>
                                             {
-                                                index === 2 ? <span className="line-through mr-2 text-red-600">₵200.00</span> : <span>₵{products[item as keyof typeof products].price}</span>
-                                            }
-
-                                            {
-                                                index === 2 ? <span className="">₵{products[item as keyof typeof products].price}</span> : ""
-                                            }
-                                            
+                                                                        index === 2 ? <span className="line-through mr-2 text-red-600">Sold Out</span> : <span>₵{products[item as keyof typeof products].price}</span>
+                                                                    }           
                                         </p>
                                     </div>
-                                    <a href={`/shop/${products[item as keyof typeof products].name.replace(/\s+/g, '').toLowerCase()}`}>
-                                        <button className="rounded-md w-full mt-6 bg-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+                                    {index === 2 ? (
+                                        <button
+                                            className="rounded-md w-full mt-6 bg-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                            type="button"
+                                            disabled
+                                        >
                                             View Product
                                         </button>
-                                    </a>
+                                    ) : (
+                                        <a href={`/shop/${products[item as keyof typeof products].name.replace(/\s+/g, '').toLowerCase()}`}>
+                                            <button
+                                                className="rounded-md w-full mt-6 bg-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none"
+                                                type="button"
+                                            >
+                                                View Product
+                                            </button>
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         ))

@@ -241,6 +241,30 @@ export const products = {
         quantity: 7,
         otherImages: ["/img/ghanababe.jpg"]
     },
+    ghanababecroptopblack:{
+        id:4,
+        name: "GHANA BABE CROPTOP BLACK",
+        price: 200.00,
+        img: "/img/ghbabeblacknew.png",
+        sizes: [
+             {
+                name: "S(2-4)",
+                quantity: 90
+            },
+            {
+                name: "M(6-8)",
+                quantity: 30
+            },
+        ],
+        colors:[
+            {
+                name: "White",
+                code: "FFFFF"
+            },
+        ],
+        quantity: 7,
+        otherImages: ["/img/ghbabeblacknew.png"]
+    },
      gtaaccrashirtcream:{
         id: 0,
         name: "GTA ACCRA SHIRT CREAM",
