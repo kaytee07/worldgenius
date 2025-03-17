@@ -559,47 +559,6 @@ export const products = {
         quantity: 7,
         otherImages: ["/img/ghanaboysblack.jpg"]
     },
-    accrawedeyshirt:{
-        id: 2,
-        name: "ACCRA WE DEY SHIRT",
-        price: 200.00,
-        img: "/img/419front.jpg",
-        sizes: [
-            {
-                name: "M",
-                quantity: 30
-            },
-            {
-                name: "L",
-                quantity: 30
-            },
-            {
-                name: "XL",
-                quantity: 55
-            },
-            {
-                name: "2XL",
-                quantity: 55
-            },
-             {
-                name: "3XL",
-                quantity: 55
-            },
-             {
-                name: "4XL",
-                quantity: 55
-            }
-        ],
-        colors:[
-            {
-                name: "Black",
-                code: "88498F"
-            },
-           
-        ],
-        quantity: 7,
-        otherImages: ["/img/419front.jpg", "/img/419back.jpg"]
-    },
     ineedspacetops:{
         id: 2,
         name: "I NEED SPACE TOPS",
