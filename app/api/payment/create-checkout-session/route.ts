@@ -58,7 +58,7 @@ export async function POST(req: Request) {
       totalAmount: parseFloat(total).toFixed(2),
       description: 'Online purchase',
       callbackUrl: `${process.env.NEXTAUTH_URL}/api/payment/webhook`,
-      returnUrl: `${process.env.NEXTAUTH_URL}/payment/verify`,
+      returnUrl: `${process.env.NEXTAUTH_URL}`,
       merchantAccountNumber: process.env.HUBTEL_MERCHANT_ACCOUNT,
       cancellationUrl: `${process.env.NEXTAUTH_URL}/payment/verify?canceled=true`,
       clientReference: clientreference,
