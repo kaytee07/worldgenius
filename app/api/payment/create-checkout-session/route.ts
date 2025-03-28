@@ -108,12 +108,11 @@ export async function POST(req: Request) {
       clientReference: payload.clientReference
     });
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error in POST:', error);
     return NextResponse.json(
       { 
-        error: error.message || 'Internal server error',
-        stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+        error:  'Internal server error',
       },
       { status: 500 }
     );
