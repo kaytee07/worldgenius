@@ -3,16 +3,15 @@
 import FailScreen from '@/components/FailScreen';
 import PaymentSpinner from '@/components/PaymentSpinner';
 import SuccessScreen from '@/components/SuccessScreen';
-import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export default function PaymentVerify() {
     const [status, setStatus] = useState<'pending' | 'verified' | 'failed'>('pending');
-    const params = useSearchParams();
+    //const params = useSearchParams();
 
     useEffect(() => {
         const verify = async () => {
-            const ref = params.get('reference') || localStorage.getItem('paymentRef');
+            const ref = localStorage.getItem('paymentRef');
 
             try {
                 const res = await fetch(`/api/payment/verify?reference=${ref}`);
