@@ -52,9 +52,9 @@ const Order = () => {
     };
 
     useEffect(() => {
-        axios.get('/api/paystack/pending').then(({ data }) => setPendingOrders(data)).catch(console.error);
-        axios.get('/api/paystack/delivered').then(({ data }) => setDeliveredOrders(data)).catch(console.error);
-        axios.get('/api/paystack/all').then(({ data }) => setOrders(data)).catch(console.error);
+        axios.get('/api/payment/pending').then(({ data }) => setPendingOrders(data)).catch(console.error);
+        axios.get('/api/payment/delivered').then(({ data }) => setDeliveredOrders(data)).catch(console.error);
+        axios.get('/api/payment/all').then(({ data }) => setOrders(data)).catch(console.error);
     }, []);
 
     const currentOrders = {

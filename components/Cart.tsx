@@ -195,7 +195,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
         }
 
         try {
-            const response = await fetch('/api/paystack/create-checkout-session', {
+            const response = await fetch('/api/payment/create-checkout-session', {
                     method: 'POST', 
                     headers: {
                         'Content-Type': 'application/json'
@@ -203,17 +203,17 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
                     body: JSON.stringify(order)
             });
 
-            const data = await response.json();
-            if (data.authorizationUrl) {
-                window.location.href = data.authorizationUrl;
+            const { checkoutUrl, clientReference } = await response.json();
+            if (checkoutUrl) {
+                localStorage.setItem('paymentRef', clientReference );
+                window.location.href = checkoutUrl;
             } else {
                 
                 console.error('Error: No authorization URL received');
                 setLoader(false)
-                alert('check if details provided are correct');
+                alert('Error please try again');
             }
 
-            console.log(data)
         } catch (error){
             setLoader(!false)
             console.log(error)

@@ -16,13 +16,14 @@ export  async function GET(req: Request) {
 
     switch (status) {
       case 'pending':
-        orders = await Order.find({ delivery_status: 'pending' });
+        orders = await Order.find({ delivery_status: 'pending', payment_status: 'paid' });
+        console.log(orders)
         break;
       case 'delivered':
         orders = await Order.find({ delivery_status: { $ne: 'pending' } });
         break;
       case 'all':
-        orders = await Order.find({});
+        orders = await Order.find({payment_status: 'paid'});
         break;
       default:
         return new Response(JSON.stringify({ message: 'Invalid status parameter' }), {
@@ -30,6 +31,7 @@ export  async function GET(req: Request) {
         headers: { 'Content-Type': 'application/json' },
         });
     }
+
 
     return new Response(JSON.stringify(orders), {
         status: 200,

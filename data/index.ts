@@ -179,7 +179,7 @@ export const bestSelling = {
         topoftheworldcapseablue:{
         id: 1,
         name: "TOP OF THE WORLD CAP SEA BLUE",
-        price: 100.00,
+        price: 0.60,
         img: "/img/topoftheworldseablue.png",
         sizes: [
             {
@@ -476,7 +476,7 @@ export const products = {
         topoftheworldtruckercapseablue:{
         id: 1,
         name: "TOP OF THE WORLD TRUCKER CAP SEA BLUE",
-        price: 100.00,
+        price: 0.10,
         img: "/img/topoftheworldseablue.png",
         sizes: [
             {
