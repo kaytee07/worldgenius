@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Buffer } from 'buffer';
 import { Order } from '@/models/order';
+import { connectToDB } from '@/lib/db/database';
 
 
 
@@ -24,6 +25,7 @@ type CountryOption = {
 
 
 export async function POST(req: Request) {
+  connectToDB()
   try {
     const { 
       email, 
