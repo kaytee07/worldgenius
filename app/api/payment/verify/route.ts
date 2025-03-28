@@ -7,8 +7,8 @@ import { NextResponse } from "next/server";
 // app/api/payments/verify/route.ts
 export async function GET(req: Request) {
   connectToDB()
+  const { searchParams } = new URL(req.url);
   try {
-    const { searchParams } = new URL(req.url);
     const reference = searchParams.get('reference');
     console.log(reference)
 
@@ -22,7 +22,11 @@ export async function GET(req: Request) {
     console.log(hubtelStatus)
     return NextResponse.json({ status: hubtelStatus });
     } catch (error: unknown) {
-      console.log(error)
+        return new Response(JSON.stringify({ message: error }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+        });
+  
     }
   
 }
