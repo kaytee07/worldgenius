@@ -25,39 +25,33 @@ type CountryOption = {
 
 export async function POST(req: Request) {
   try {
-     const { 
-            email, 
-            number, 
-            products,
-            total,
-            address, 
-            country,
-            city} = await req.json();
-            
-       
+    const { 
+      email, 
+      number, 
+      products,
+      total,
+      address, 
+      country,
+      city
+    } = await req.json();
+
     // 1. Generate Basic Auth Header
     const authString = `${process.env.HUBTEL_CLIENT_ID}:${process.env.HUBTEL_API_KEY}`;
     const authHeader = `Basic ${Buffer.from(authString).toString('base64')}`;
-
-  
 
     const timestamp = Date.now();
     const randomString = Math.random().toString(36).substring(2, 8).toUpperCase();
     const clientreference = `ORDER-${timestamp}-${randomString}`;
 
-    // // 2. Format metadata (customize as needed)
-    
-        const formattedProducts = products.map((product: ItemObject) => ({
-            name: product.name,
-            quantity: product.quantity,
-            color: product.color,
-            price: product.originalPrice,
-            image: product.img,
-            size: product.size,
-        }));
-    
+    const formattedProducts = products.map((product: ItemObject) => ({
+      name: product.name,
+      quantity: product.quantity,
+      color: product.color,
+      price: product.originalPrice,
+      image: product.img,
+      size: product.size,
+    }));
 
-    /// 3. Create Hubtel Request Payload with metadata
     const payload = {
       totalAmount: parseFloat(total).toFixed(2),
       description: 'Online purchase',
@@ -69,17 +63,16 @@ export async function POST(req: Request) {
       payeeEmail: email,
       payeeMobileNumber: number,
       metadata: {
-         products: formattedProducts,
-         email: email,
-         number: number,
-         address: address,
-         country: country.label || 'Ghana',
-         city: city
+        products: formattedProducts,
+        email: email,
+        number: number,
+        address: address,
+        country: country?.label || 'Ghana',
+        city: city
       }
     };
 
-
-    // 4. Send Request to Hubtel
+    // Send Request to Hubtel
     const response = await fetch('https://payproxyapi.hubtel.com/items/initiate', {
       method: 'POST',
       headers: {
@@ -89,22 +82,25 @@ export async function POST(req: Request) {
       body: JSON.stringify(payload)
     });
 
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || 'Failed to initiate payment');
+    }
+
     const newOrder = new Order({
       email: email,
       address: address,
       number: number,
-      country: country.label,
+      country: country?.label,
       city: city,
       clientReference: clientreference,
-      cartItems: formattedProducts || [],
+      cartItems: formattedProducts,
       total: parseFloat(total).toFixed(2),
       payment_status: "pending",
     });
 
     await newOrder.save();
-
-
-    const data = await response.json();
 
     return NextResponse.json({
       checkoutUrl: data.data.checkoutUrl,
@@ -112,12 +108,15 @@ export async function POST(req: Request) {
       clientReference: payload.clientReference
     });
 
-  } catch (error: unknown) {
-    console.log(error)
-     return new Response(JSON.stringify({ message: error }), {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' },
-        });
+  } catch (error: any) {
+    console.error('Error in POST:', error);
+    return NextResponse.json(
+      { 
+        error: error.message || 'Internal server error',
+        stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+      },
+      { status: 500 }
+    );
   }
 }
 
