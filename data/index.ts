@@ -456,7 +456,7 @@ export const products = {
         topoftheworldtruckercapseablue:{
         id: 1,
         name: "TOP OF THE WORLD TRUCKER CAP SEA BLUE",
-        price: 0.10,
+        price: 100,
         img: "/img/topoftheworldseablue.png",
         sizes: [
             {
@@ -537,6 +537,10 @@ export const products = {
                 quantity: 30
             },
             {
+                name: "L",
+                quantity: 55
+            },
+            {
                 name: "XL",
                 quantity: 55
             },
@@ -574,6 +578,10 @@ export const products = {
                 name: "M",
                 quantity: 30
             },
+             {
+                name: "L",
+                quantity: 55
+            },
             {
                 name: "XL",
                 quantity: 55
@@ -601,70 +609,70 @@ export const products = {
         quantity: 8,
         otherImages: ["/img/boneshakersweaterArtboard-1.png", "/img/boneshakersweaterArtboard-2.png"]
     },
-    ghanaboysshirt:{
-        id: 2,
-        name: "GHANA BOYS SHIRT",
-        price: 200.00,
-        img: "/img/ghanaboysblack.jpg",
-        sizes: [
+    // ghanaboysshirt:{
+    //     id: 2,
+    //     name: "GHANA BOYS SHIRT",
+    //     price: 200.00,
+    //     img: "/img/ghanaboysblack.jpg",
+    //     sizes: [
                 
-            {
-                name: "M",
-                quantity: 30
-            },
-            {
-                name: "L",
-                quantity: 30
-            },
-            {
-                name: "XL",
-                quantity: 55
-            },
-            {
-                name: "2XL",
-                quantity: 55
-            },
-             {
-                name: "3XL",
-                quantity: 55
-            },
-             {
-                name: "4XL",
-                quantity: 55
-            }
-        ],
-        colors:[
-            {
-                name: "Black",
-                code: "88498F"
-            },
+    //         {
+    //             name: "M",
+    //             quantity: 30
+    //         },
+    //         {
+    //             name: "L",
+    //             quantity: 30
+    //         },
+    //         {
+    //             name: "XL",
+    //             quantity: 55
+    //         },
+    //         {
+    //             name: "2XL",
+    //             quantity: 55
+    //         },
+    //          {
+    //             name: "3XL",
+    //             quantity: 55
+    //         },
+    //          {
+    //             name: "4XL",
+    //             quantity: 55
+    //         }
+    //     ],
+    //     colors:[
+    //         {
+    //             name: "Black",
+    //             code: "88498F"
+    //         },
            
-        ],
-        quantity: 7,
-        otherImages: ["/img/ghanaboysblack.jpg"]
-    },
-     dndtruckercap:{
-        id: 1,
-        name: "DND TRUCKER CAP",
-        price: 100.00,
-        img: "/img/dndcap.jpg",
-        sizes: [
-            {
-                name: "SAME SIZE",
-                quantity: 20
-            },
+    //     ],
+    //     quantity: 7,
+    //     otherImages: ["/img/ghanaboysblack.jpg"]
+    // },
+    //  dndtruckercap:{
+    //     id: 1,
+    //     name: "DND TRUCKER CAP",
+    //     price: 100.00,
+    //     img: "/img/dndcap.jpg",
+    //     sizes: [
+    //         {
+    //             name: "SAME SIZE",
+    //             quantity: 20
+    //         },
             
-        ],
-        colors:[
-            {
-                name: "Red and black",
-                code: "e71016"
-            },
+    //     ],
+    //     colors:[
+    //         {
+    //             name: "Red and black",
+    //             code: "e71016"
+    //         },
            
-        ],
-        quantity: 7,
-        otherImages: ["/img/dndcap.jpg"]
-    },
+    //     ],
+    //     quantity: 7,
+    //     otherImages: ["/img/dndcap.jpg"]
+    // },
        
     redletterotwjerseyworldg3niusxoutl8tscollabjersey:{
         id: 0,
@@ -679,6 +687,10 @@ export const products = {
             {
                 name: "M",
                 quantity: 30
+            },
+             {
+                name: "L",
+                quantity: 55
             },
             {
                 name: "XL",
@@ -722,6 +734,10 @@ export const products = {
                 name: "M",
                 quantity: 30
             },
+             {
+                name: "L",
+                quantity: 55
+            },
             {
                 name: "XL",
                 quantity: 55
@@ -762,6 +778,10 @@ export const products = {
             {
                 name: "M",
                 quantity: 30
+            },
+             {
+                name: "L",
+                quantity: 55
             },
             {
                 name: "XL",
