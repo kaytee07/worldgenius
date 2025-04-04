@@ -23,6 +23,7 @@ export async function fetchHubtelStatus(reference: string | null) {
     }
 
     const data = await response.json();
+    console.log(data);
     return data.Data[0]?.TransactionStatus || 'unknown';
     
   } catch (error) {

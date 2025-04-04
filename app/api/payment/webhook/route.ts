@@ -9,7 +9,8 @@ export async function POST(req: Request) {
   
     const callbackData = await req.json();
 
-    
+    console.log(callbackData.Data)
+
     if (!callbackData?.Data?.CheckoutId) {
       console.error('Invalid Hubtel callback structure:', callbackData);
       return NextResponse.json(
@@ -40,6 +41,7 @@ export async function POST(req: Request) {
 
 
         if (!updatedOrder) {
+          console.log(updatedOrder)
           throw new Error(`Order with reference ${callbackData.Data.ClientReference} not found`);
         }
 

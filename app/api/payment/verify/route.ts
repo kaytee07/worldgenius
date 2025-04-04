@@ -10,7 +10,6 @@ export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   try {
     const reference = searchParams.get('reference');
-    console.log(reference)
 
     // const order = await Order.findOne({ clientReference: reference });
     // console.log(order)
@@ -22,6 +21,7 @@ export async function GET(req: Request) {
     console.log(hubtelStatus)
     return NextResponse.json({ status: hubtelStatus });
     } catch (error: unknown) {
+      console.log(error)
         return new Response(JSON.stringify({ message: error }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' },

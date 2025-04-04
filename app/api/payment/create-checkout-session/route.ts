@@ -58,7 +58,7 @@ export async function POST(req: Request) {
       totalAmount: parseFloat(total).toFixed(2),
       description: 'Online purchase',
       callbackUrl: `${process.env.NEXTAUTH_URL}/api/payment/webhook`,
-      returnUrl: `${process.env.NEXTAUTH_URL}`,
+      returnUrl: `${process.env.NEXTAUTH_URL}/payment/verify`,
       merchantAccountNumber: process.env.HUBTEL_MERCHANT_ACCOUNT,
       cancellationUrl: `${process.env.NEXTAUTH_URL}/payment/verify?canceled=true`,
       clientReference: clientreference,
@@ -85,6 +85,9 @@ export async function POST(req: Request) {
     });
 
     const data = await response.json();
+
+    console.log(data)
+    console.log("here")
 
     if (!response.ok) {
       throw new Error(data.message || 'Failed to initiate payment');
