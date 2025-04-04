@@ -42,7 +42,7 @@ const Allitems = () => {
                         </div> : ""}
                     <img
                             src={`${products[item as keyof typeof products].img}`}
-                    alt="card-image"
+                    alt="card-images"
                     className=" w-full "
                     />
                 </div>
