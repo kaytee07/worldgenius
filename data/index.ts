@@ -651,28 +651,28 @@ export const products = {
     //     quantity: 7,
     //     otherImages: ["/img/ghanaboysblack.jpg"]
     // },
-    //  dndtruckercap:{
-    //     id: 1,
-    //     name: "DND TRUCKER CAP",
-    //     price: 100.00,
-    //     img: "/img/dndcap.jpg",
-    //     sizes: [
-    //         {
-    //             name: "SAME SIZE",
-    //             quantity: 20
-    //         },
+     dndtruckercap:{
+        id: 1,
+        name: "DND TRUCKER CAP",
+        price: 100.00,
+        img: "/img/dndcap.jpg",
+        sizes: [
+            {
+                name: "SAME SIZE",
+                quantity: 20
+            },
             
-    //     ],
-    //     colors:[
-    //         {
-    //             name: "Red and black",
-    //             code: "e71016"
-    //         },
+        ],
+        colors:[
+            {
+                name: "Red and black",
+                code: "e71016"
+            },
            
-    //     ],
-    //     quantity: 7,
-    //     otherImages: ["/img/dndcap.jpg"]
-    // },
+        ],
+        quantity: 7,
+        otherImages: ["/img/dndcap.jpg"]
+    },
        
     redletterotwjerseyworldg3niusxoutl8tscollabjersey:{
         id: 0,
