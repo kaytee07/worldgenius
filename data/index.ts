@@ -720,51 +720,51 @@ export const products = {
         otherImages: ["/img/redletterdayjerseyfront.png", "/img/redletterjerseyback.png"]
     },
 
-    //      rawotwjerseyworldg3niusxoutl8tscollabjersey:{
-    //     id: 0,
-    //     name: "RAW OTW JERSEY WORLDG3NIUS X OUTL8TS COLLAB JERSEY",
-    //     price: 400.00,
-    //     img: "/img/rawfront.png",
-    //     sizes: [
-    //                    {
-    //             name: "S",
-    //             quantity: 90
-    //         },
-    //         {
-    //             name: "M",
-    //             quantity: 30
-    //         },
-    //          {
-    //             name: "L",
-    //             quantity: 55
-    //         },
-    //         {
-    //             name: "XL",
-    //             quantity: 55
-    //         },
-    //         {
-    //             name: "2XL",
-    //             quantity: 55
-    //         },
-    //          {
-    //             name: "3XL",
-    //             quantity: 55
-    //         },
-    //         {
-    //             name: "4XL",
-    //             quantity: 55
-    //         }
-    //     ],
-    //     colors:[
-    //         {
-    //             name: "Cream",
-    //             code: "CEBA7C"
-    //         },
+         rawotwjerseyworldg3niusxoutl8tscollabjersey:{
+        id: 0,
+        name: "RAW OTW JERSEY WORLDG3NIUS X OUTL8TS COLLAB JERSEY",
+        price: 400.00,
+        img: "/img/rawfront.png",
+        sizes: [
+                       {
+                name: "S",
+                quantity: 90
+            },
+            {
+                name: "M",
+                quantity: 30
+            },
+             {
+                name: "L",
+                quantity: 55
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+             {
+                name: "3XL",
+                quantity: 55
+            },
+            {
+                name: "4XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "Cream",
+                code: "CEBA7C"
+            },
            
-    //     ],
-    //     quantity: 8,
-    //     otherImages: ["/img/rawfront.png", "/img/rawback.png"]
-    // },
+        ],
+        quantity: 8,
+        otherImages: ["/img/rawfront.png", "/img/rawback.png"]
+    },
          ashaotwjerseyworldg3niusxoutl8tscollabjersey:{
         id: 0,
         name: "ASHA OTW JERSEY WORLDG3NIUS X OUTL8TS COLLAB JERSEY",
