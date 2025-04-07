@@ -171,7 +171,7 @@ const Order = () => {
                                 {/* Order Footer */}
                                 <div className="pt-4 border-t border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                                     <p className="text-lg font-semibold text-gray-900">
-                                        Total: GH₵{(order.total / 100).toFixed(2)}
+                                        Total: GH₵{(order.total}
                                     </p>
                                     <button
                                         onClick={() => markAsDelivered(order._id)}
