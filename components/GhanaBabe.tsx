@@ -81,7 +81,7 @@ const NewArrivals = () => {
                                         </p>
                                         <p className={`text-black text-md font-semibold`}>
                                             {
-                                                                        index === 2 ? <span className="line-through mr-2 text-red-600">Sold Out</span> : <span>₵{products[item as keyof typeof products].price}</span>
+                                                                        index === 10 ? <span className="line-through mr-2 text-red-600">Sold Out</span> : <span>₵{products[item as keyof typeof products].price}</span>
                                                                     }           
                                         </p>
                                     </div>
