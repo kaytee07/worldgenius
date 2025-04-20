@@ -56,7 +56,7 @@ const Allitems = () => {
                                     index === 0 || index === 1 || index === 8 ? <span className="line-through mr-2 text-red-600">Sold Out</span> : <span>₵{products[item as keyof typeof products].price}</span>
                         }                        
                     
-                         
+                         2
                                                                 
                     </p>
                     </div>
