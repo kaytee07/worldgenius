@@ -64,7 +64,7 @@ const NewArrivals = () => {
                             <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200">
                                
                                 <div className="relative overflow-hidden bg-clip-border">
-                                    {index === 2 ? <div className="relative">
+                                    {index === 10 ? <div className="relative">
                                         <img className="absolute max-sm:left-20 max-sm:h-32 max-sm:w-32 left-28 h-44 w-44" src="/img/25tag.png" alt="tag" />
                                     </div> : ""}
                                     
@@ -85,7 +85,7 @@ const NewArrivals = () => {
                                                                     }           
                                         </p>
                                     </div>
-                                    {index === 2  ? (
+                                    {index === 10  ? (
                                         <button
                                             className="rounded-md w-full mt-6 bg-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                             type="button"

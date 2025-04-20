@@ -37,7 +37,7 @@ const Allitems = () => {
             Object.keys(allproducts).map((item: string,index)=> (
                 <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200">
                 <div className="relative overflow-hidden bg-clip-border">
-                        {index === 0 ? <div className="relative">
+                        {index === 60 ? <div className="relative">
                             <img className="absolute max-sm:left-20 max-sm:h-32 max-sm:w-32 left-28 h-44 w-44" src="/img/25tag.png" alt="tag" />
                         </div> : ""}
                     <img

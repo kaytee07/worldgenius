@@ -122,7 +122,7 @@ export const bestSelling = {
     ghanababecroptop:{
         id:4,
         name: "GHANA BABE CROPTOP",
-        price: 150.00,
+        price: 200.00,
         img: "/img/ghanababe.jpg",
         sizes: [
             {
@@ -205,7 +205,7 @@ export const products = {
     ghanababecroptop:{
         id:4,
         name: "GHANA BABE CROPTOP",
-        price: 150.00,
+        price: 200.00,
         img: "/img/ghanababenew.png",
         sizes: [
             {
