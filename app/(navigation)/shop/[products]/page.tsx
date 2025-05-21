@@ -139,7 +139,11 @@ const Products: React.FC<ProductProps> = ({params}) => {
                           </div>
                       </div>
                       
-            
+                  <div className='mt-3 text-red-600 font-bold'>
+                      {'delivery' in Products && (
+                          <h3>{Products.delivery}</h3>
+                      )}
+                  </div>
             {/* <div className="quantity flex flex-col">
                 <label htmlFor="quantity">Quantity</label>
                 <input type="number" name="quantity" id="quantity" />

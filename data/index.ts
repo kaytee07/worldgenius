@@ -1,3 +1,7 @@
+const teeandcap = "Delivery will bemade 3 to 5 business days after your order";
+const jersey = "Delivery will bemade 10 to 12 business days after your order"
+
+
 export const navigation = [ 
     {
         name: "Shop",
@@ -240,6 +244,7 @@ export const products = {
             },
         ],
         quantity: 7,
+        delivery: teeandcap,
         otherImages: ["/img/ghanababe.jpg"]
     },
     ghanababecroptopblack:{
@@ -264,6 +269,7 @@ export const products = {
             },
         ],
         quantity: 7,
+        delivery: teeandcap,
         otherImages: ["/img/ghbabeblacknew.png"]
     },
      gtaaccrashirtcream:{
@@ -301,6 +307,7 @@ export const products = {
            
         ],
         quantity: 8,
+        delivery: teeandcap,
         otherImages: ["/img/gtacream.jpg"]
     },
     gtaaccrashirtgrey:{
@@ -337,6 +344,7 @@ export const products = {
             },
         ],
         quantity: 8,
+        delivery: teeandcap,
         otherImages: ["/img/gtagrey.jpg"]
     },
       gtaaccrashirtwhite:{
@@ -373,6 +381,7 @@ export const products = {
             },
         ],
         quantity: 8,
+        delivery: teeandcap,
         otherImages: ["/img/gtawhite.jpg"]
     },
      
@@ -410,6 +419,7 @@ export const products = {
             }
         ],
         quantity: 8,
+        delivery: teeandcap,
         otherImages: ["/img/gtablack.jpg"]
     },
     boneshakerwhiteshirt:{
@@ -450,6 +460,7 @@ export const products = {
             }
         ],
         quantity: 8,
+        delivery: teeandcap,
         otherImages: ["/img/boneshakerteeshirt.png"]
     },
    
@@ -473,6 +484,7 @@ export const products = {
            
         ],
         quantity: 7,
+        delivery: teeandcap,
         otherImages: ["/img/topoftheworldseablue.png"]
     },
     topoftheworldtruckercapblackandwhite:{
@@ -520,6 +532,7 @@ export const products = {
            
         ],
         quantity: 8,
+        delivery: teeandcap,
         otherImages: ["/img/worldjerseyfront.png", "/img/worldjerseyback.png"]
     },
         blackholeshirt:{
@@ -565,6 +578,7 @@ export const products = {
            
         ],
         quantity: 8,
+        delivery: teeandcap,
         otherImages: ["/img/blackholeteefront.png", "/img/blackholeteeback.png"]
     },
      boneshakersweatshirt:{
@@ -607,6 +621,7 @@ export const products = {
            
         ],
         quantity: 8,
+        delivery: teeandcap,
         otherImages: ["/img/boneshakersweaterArtboard-1.png", "/img/boneshakersweaterArtboard-2.png"]
     },
     // ghanaboysshirt:{
@@ -671,6 +686,7 @@ export const products = {
            
         ],
         quantity: 7,
+        delivery: teeandcap,
         otherImages: ["/img/dndcap.jpg"]
     },
        
@@ -717,6 +733,7 @@ export const products = {
            
         ],
         quantity: 8,
+        delivery: jersey,
         otherImages: ["/img/redletterdayjerseyfront.png", "/img/redletterjerseyback.png"]
     },
 
@@ -763,6 +780,7 @@ export const products = {
            
         ],
         quantity: 8,
+        delivery: jersey,
         otherImages: ["/img/rawfront.png", "/img/rawback.png"]
     },
          ashaotwjerseyworldg3niusxoutl8tscollabjersey:{
@@ -808,6 +826,7 @@ export const products = {
            
         ],
         quantity: 8,
+        delivery: jersey,
         otherImages: ["/img/ashafront.png", "/img/ashaback.png"]
     },
     ineedspacetops:{
@@ -849,6 +868,7 @@ export const products = {
            
         ],
         quantity: 7,
+        delivery: teeandcap,
         otherImages: [
            "/img/ineedspace.jpg"
         ]
