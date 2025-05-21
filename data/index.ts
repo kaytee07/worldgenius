@@ -1,5 +1,5 @@
-const teeandcap = "Delivery will bemade 3 to 5 business days after your order";
-const jersey = "Delivery will bemade 10 to 12 business days after your order"
+const teeandcap = "Delivery will be made 3 to 5 business days after your order.";
+const jersey = "Delivery will be made 10 to 12 business days after your order."
 
 
 export const navigation = [ 
@@ -7,7 +7,7 @@ export const navigation = [
         name: "Shop",
         url:"/shop"
     },
-    {
+    { 
         name: "Gallery",
         url:"/gallery"
     },

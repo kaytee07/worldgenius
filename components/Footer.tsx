@@ -47,6 +47,7 @@ const Footer = () => {
             </a>
            
         </div>
+        <h3>NO REFUND</h3>
         <p className="mt-8 text-base leading-6 text-center text-[#7e7e7e]">
             © 2025 WORLDG3NIUS. All rights reserved.
         </p>
