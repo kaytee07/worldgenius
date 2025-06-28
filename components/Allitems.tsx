@@ -53,14 +53,15 @@ const Allitems = () => {
                     </p>
                     <p className={`text-black text-md font-semibold`}>
                         {
-                                    index === 1 || index === 8 ? <span className="line-through mr-2 text-red-600">Sold Out</span> : <span>₵{products[item as keyof typeof products].price}</span>
+                                   index === 22 || index === 45 ? <span className="line-through mr-2 text-red-600">Sold Out</span> :
+                                    <span>₵{products[item as keyof typeof products].price}</span>
                         }                        
                     
                         
                                                                 
                     </p>
                     </div>
-                    {index === 1 || index === 8? (
+                    {index === 52 || index === 40? (
                             <button
                                 className="rounded-md w-full mt-6 bg-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                 type="button"
@@ -68,7 +69,8 @@ const Allitems = () => {
                             >
                                 View Product
                             </button>
-                            ) : (
+                            ) : 
+                            
                             <a href={`/shop/${products[item as keyof typeof products].name.replace(/\s+/g, '').toLowerCase()}`}>
                                 <button
                                 className="rounded-md w-full mt-6 bg-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none"
@@ -77,7 +79,7 @@ const Allitems = () => {
                                 View Product
                                 </button>
                             </a>
-                    )}
+                    }
                 </div>
             </div>
             ))
