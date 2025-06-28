@@ -206,6 +206,74 @@ export const bestSelling = {
 }
 
 export const products = {
+         summershorts:{
+        id: 0,
+        name: "SUMMER SHORTS",
+        price: 250.00,
+        img: "/img//img/summershorts.png",
+        sizes: [
+            {
+                name: "M",
+                quantity: 30
+            },
+            {
+                name: "L",
+                quantity: 55
+            },
+        ],
+        colors:[
+            {
+                name: "Cream",
+                code: "CEBA7C"
+            },
+           
+        ],
+        quantity: 8,
+        delivery: teeandcap,
+        otherImages: ["/img/summershorts.png"]
+    },
+    space3shirt:{
+        id: 0,
+        name: "SPACE 3 SHIRT",
+        price: 250.00,
+        img: "/img/space3frontmock.png",
+        sizes: [
+                       {
+                name: "M",
+                quantity: 90
+            },
+            {
+                name: "L",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+             {
+                name: "3XL",
+                quantity: 55
+            },
+            {
+                name: "4XL",
+                quantity: 55
+            }
+        ],
+        colors:[
+            {
+                name: "Cream",
+                code: "CEBA7C"
+            },
+           
+        ],
+        quantity: 8,
+        delivery: teeandcap,
+        otherImages: ["/img/space3frontmock.png", "/img/space3backmock.png"]
+    },
     ghanababecroptop:{
         id:4,
         name: "GHANA BABE CROPTOP",
@@ -535,74 +603,6 @@ export const products = {
         quantity: 8,
         delivery: teeandcap,
         otherImages: ["/img/worldjerseyfront.png", "/img/worldjerseyback.png"]
-    },
-     summershorts:{
-        id: 0,
-        name: "SUMMER SHORTS",
-        price: 250.00,
-        img: "/img/worldjerseyfront.png",
-        sizes: [
-            {
-                name: "M",
-                quantity: 30
-            },
-            {
-                name: "L",
-                quantity: 55
-            },
-        ],
-        colors:[
-            {
-                name: "Cream",
-                code: "CEBA7C"
-            },
-           
-        ],
-        quantity: 8,
-        delivery: teeandcap,
-        otherImages: ["/img/summershorts.png"]
-    },
-    space3shirt:{
-        id: 0,
-        name: "SPACE 3 SHIRT",
-        price: 250.00,
-        img: "/img/space3frontmock.png",
-        sizes: [
-                       {
-                name: "M",
-                quantity: 90
-            },
-            {
-                name: "L",
-                quantity: 30
-            },
-            {
-                name: "XL",
-                quantity: 55
-            },
-            {
-                name: "2XL",
-                quantity: 55
-            },
-             {
-                name: "3XL",
-                quantity: 55
-            },
-            {
-                name: "4XL",
-                quantity: 55
-            }
-        ],
-        colors:[
-            {
-                name: "Cream",
-                code: "CEBA7C"
-            },
-           
-        ],
-        quantity: 8,
-        delivery: teeandcap,
-        otherImages: ["/img/space3frontmock.png", "/img/space3backmock.png"]
     },
     
         blackholeshirt:{
