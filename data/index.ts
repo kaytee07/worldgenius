@@ -209,8 +209,8 @@ export const products = {
          summershorts:{
         id: 0,
         name: "SUMMER SHORTS",
-        price: 250.00,
-        img: "/img//img/summershorts.png",
+        price: 280.00,
+        img: "/img/summershorts.png",
         sizes: [
             {
                 name: "M",
@@ -234,8 +234,8 @@ export const products = {
     },
     space3shirt:{
         id: 0,
-        name: "SPACE 3 SHIRT",
-        price: 250.00,
+        name: "SPACE 3.0 SHIRT",
+        price: 180.00,
         img: "/img/space3frontmock.png",
         sizes: [
                        {
