@@ -234,7 +234,7 @@ export const products = {
     },
     space3shirt:{
         id: 0,
-        name: "SPACE 3.0 SHIRT",
+        name: "SPACE 3 SHIRT",
         price: 180.00,
         img: "/img/space3frontmock.png",
         sizes: [
