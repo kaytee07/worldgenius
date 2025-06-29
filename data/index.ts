@@ -212,32 +212,6 @@ export const products = {
         price: 280.00,
         img: "/img/summershorts.png",
         sizes: [
-            {
-                name: "M",
-                quantity: 30
-            },
-            {
-                name: "L",
-                quantity: 55
-            },
-        ],
-        colors:[
-            {
-                name: "Cream",
-                code: "CEBA7C"
-            },
-           
-        ],
-        quantity: 8,
-        delivery: teeandcap,
-        otherImages: ["/img/summershorts.png"]
-    },
-    space3shirt:{
-        id: 0,
-        name: "SPACE 3 SHIRT",
-        price: 180.00,
-        img: "/img/space3frontmock.png",
-        sizes: [
                        {
                 name: "M",
                 quantity: 90
@@ -262,6 +236,32 @@ export const products = {
                 name: "4XL",
                 quantity: 55
             }
+        ],
+        colors:[
+            {
+                name: "Cream",
+                code: "CEBA7C"
+            },
+           
+        ],
+        quantity: 8,
+        delivery: teeandcap,
+        otherImages: ["/img/summershorts.png"]
+    },
+    space3shirt:{
+        id: 0,
+        name: "SPACE 3 SHIRT",
+        price: 180.00,
+        img: "/img/space3frontmock.png",
+          sizes: [
+            {
+                name: "M",
+                quantity: 30
+            },
+            {
+                name: "L",
+                quantity: 55
+            },
         ],
         colors:[
             {
