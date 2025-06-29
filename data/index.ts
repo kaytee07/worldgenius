@@ -206,9 +206,9 @@ export const bestSelling = {
 }
 
 export const products = {
-         summershorts:{
+         gothicsweatshorts:{
         id: 0,
-        name: "SUMMER SHORTS",
+        name: "GOTHIC SWEAT SHORTS",
         price: 280.00,
         img: "/img/summershorts.png",
         sizes: [
