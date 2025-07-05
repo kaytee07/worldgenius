@@ -206,6 +206,76 @@ export const bestSelling = {
 }
 
 export const products = {
+    "4girlswhiteteeshirt":{
+        id: 0,
+        name: "4 GIRLS WHITE TEE SHIRT",
+        price: 250.00,
+        img: "/img/photo_2_2025-07-05_11-07-34.jpg",
+        sizes: [
+                       {
+                name: "M",
+                quantity: 90
+            },
+            {
+                name: "L",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+            
+        ],
+        colors:[
+            {
+                name: "Cream",
+                code: "CEBA7C"
+            },
+           
+        ],
+        quantity: 8,
+        delivery: teeandcap,
+        otherImages: ["/img/photo_2_2025-07-05_11-07-34.jpg", "/img/photo_3_2025-07-05_11-07-34.jpg"]
+    },
+    "4girlsblackteeshirt":{
+        id: 0,
+        name: "4 GIRLS BLACK TEE SHIRT",
+        price: 250.00,
+        img: "/img/photo_1_2025-07-05_11-07-34.jpg",
+        sizes: [
+                       {
+                name: "M",
+                quantity: 90
+            },
+            {
+                name: "L",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+            
+        ],
+        colors:[
+            {
+                name: "Cream",
+                code: "CEBA7C"
+            },
+           
+        ],
+        quantity: 8,
+        delivery: teeandcap,
+        otherImages: ["/img/photo_1_2025-07-05_11-07-34.jpg", "/img/photo_4_2025-07-05_11-07-34.jpg"]
+    },
          gothicsweatshorts:{
         id: 0,
         name: "GOTHIC SWEAT SHORTS",
