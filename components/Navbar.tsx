@@ -14,6 +14,7 @@ interface Product {
     id: number;
     name: string;
     price: number;
+    discountPrice: number;
     discountedPrice: number; // ✅ this is what's required
     color: string;
     size: string;
