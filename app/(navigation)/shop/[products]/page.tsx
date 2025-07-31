@@ -30,6 +30,7 @@ type Item = {
     img: string,
     name: string,
     discountedPrice:number,
+    discountPrice: number,
     originalPrice: number,
     price: number,
     color: string,
