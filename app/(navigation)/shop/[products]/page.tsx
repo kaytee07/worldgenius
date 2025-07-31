@@ -45,7 +45,7 @@ const Products: React.FC<ProductProps> = ({params}) => {
     const [ color, selectColor] = useState("");
     const [size, selectSize] = useState("");
     const Products = products[params.products as keyof typeof products]; 
-    const [tempItem, setTempItem] = useState<Item>({id: 0, img: '', name: '', originalPrice: 0, price: 0, discountPrice:0, discountedPrice: 0,  color: '', size: '', quantity: 1, key: ''});
+    const [tempItem, setTempItem] = useState<Item>({id: 0, img: '', name: '', originalPrice: 0, price: 0, discountPrice:discountedPrice, discountedPrice: discountedPrice,  color: '', size: '', quantity: 1, key: ''});
     
 
 
