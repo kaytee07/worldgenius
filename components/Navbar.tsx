@@ -14,10 +14,12 @@ interface Product {
     id: number;
     name: string;
     price: number;
+    discountedPrice: number; // ✅ this is what's required
     color: string;
     size: string;
     quantity: number;
 }
+
 
 // Define the structure of the cart data (Products object)
 interface CartItems {
