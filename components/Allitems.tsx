@@ -33,57 +33,62 @@ const Allitems = () => {
       }, [])
   return (
       <ul className={`grid grid-cols-2 gap-4 max-sm:gap-[5px] pt-3 pb-3 sm:grid-cols-3 lg:grid-cols-4 w-[93vw] font-bold`}>
-    {
-            Object.keys(allproducts).map((item: string,index)=> (
-                <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200">
-                <div className="relative overflow-hidden bg-clip-border">
-                        {index === 60 ? <div className="relative">
-                            <img className="absolute max-sm:left-20 max-sm:h-32 max-sm:w-32 left-28 h-44 w-44" src="/img/25tag.png" alt="tag" />
-                        </div> : ""}
-                    <img
-                            src={`${products[item as keyof typeof products].img}`}
+{
+    Object.keys(allproducts).map((item: string, index) => (
+        <div key={index} className="relative max-sm:grid flex flex-col bg-white shadow-sm border border-slate-200">
+            <div className="relative overflow-hidden bg-clip-border">
+                {index === 60 ? <div className="relative">
+                    <img className="absolute max-sm:left-20 max-sm:h-32 max-sm:w-32 left-28 h-44 w-44" src="/img/25tag.png" alt="tag" />
+                </div> : ""}
+                <img
+                    src={`${products[item as keyof typeof products].img}`}
                     alt="card-images"
-                    className=" w-full "
-                    />
-                </div>
-                <div className="p-4">
-                        <div className="mb-2 flex items-center justify-between">
+                    className="w-full"
+                />
+            </div>
+            <div className="p-4">
+                <div className="mb-2 flex items-center justify-between">
                     <p className="text-slate-800 text-md">
                         {truncateString(products[item as keyof typeof products].name, 8)}
                     </p>
-                    <p className={`text-black text-md font-semibold`}>
-                        {
-                                   index === 4 || index === 45 ? <span className="line-through mr-2 text-red-600">Sold Out</span> :
-                                    <span>₵{products[item as keyof typeof products].price}</span>
-                        }                        
-                    
-                        
-                                                                
-                    </p>
+                    <div className="flex items-center gap-2">
+                        {index === 4 || index === 45 ? (
+                            <span className="text-red-600 text-md font-semibold">Sold Out</span>
+                        ) : (
+                            <>
+                                <span className="text-black text-md font-semibold line-through">
+                                    ₵{products[item as keyof typeof products].price}
+                                </span>
+                                <span className="text-red-600 text-md font-semibold">
+                                    ₵{products[item as keyof typeof products].discountedPrice}
+                                </span>
+                            </>
+                        )}
                     </div>
-                    {index === 4 || index === 40? (
-                            <button
-                                className="rounded-md w-full mt-6 bg-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                                type="button"
-                                disabled
-                            >
-                                View Product
-                            </button>
-                            ) : 
-                            
-                            <a href={`/shop/${products[item as keyof typeof products].name.replace(/\s+/g, '').toLowerCase()}`}>
-                                <button
-                                className="rounded-md w-full mt-6 bg-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none"
-                                type="button"
-                                >
-                                View Product
-                                </button>
-                            </a>
-                    }
                 </div>
+                {index === 4 || index === 45 ? (
+                    <button
+                        className="rounded-md w-full mt-6 bg-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button"
+                        disabled
+                    >
+                        View Product
+                    </button>
+                ) : (
+                    <a href={`/shop/${products[item as keyof typeof products].name.replace(/\s+/g, '').toLowerCase()}`}>
+                        <button
+                            className="rounded-md w-full mt-6 bg-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none"
+                            type="button"
+                        >
+                            View Product
+                        </button>
+                    </a>
+                )}
             </div>
-            ))
-        }
+        </div>
+    ))
+}
+        
     </ul>
   )
 }

@@ -29,6 +29,7 @@ type Item = {
     id: number,
     img: string,
     name: string,
+    discountedPrice:number,
     originalPrice: number,
     price: number,
     color: string,
@@ -91,7 +92,7 @@ const Products: React.FC<ProductProps> = ({params}) => {
 
         // Save updated cart to localStorage
         localStorage.setItem('cart', JSON.stringify(cart));
-
+        console.log(JSON.parse(localStorage.getItem('cart')))
         console.log('Updated Cart:', cart);
         window.location.reload()
     }
@@ -99,7 +100,7 @@ const Products: React.FC<ProductProps> = ({params}) => {
   
     useEffect(() => {
         console.log(Products)
-        setTempItem((prevItem) => ({ ...prevItem, 'id': Products.id, 'name': Products.name, 'price': Products.price, 'originalPrice': Products.price, color: Products.colors[0].name }))
+        setTempItem((prevItem) => ({ ...prevItem, 'id': Products.id, 'name': Products.name, 'price': Products.discountedPrice, 'originalPrice': Products.price, 'discountPrice': Products.discountedPrice ,color: Products.colors[0].name }))
     }, [])
   return (
     <div className='py-11 max-sm:flex max-sm:justify-center p-5 md:mb-28'>
@@ -123,7 +124,7 @@ const Products: React.FC<ProductProps> = ({params}) => {
         <div>
             <div className="name-price">
                 <h3 className={`text-md font-bold`}>{Products.name}</h3>
-                 <h2 className='py-3 text-red-500 font-bold text-lg'>Ghc {Products.price}</h2>
+                 <h2 className='py-3 text-red-500 font-bold text-lg'>Ghc {Products.discountedPrice}</h2>
             </div>
                       <div className="size-checkout">
                           <h1 className={`font-bold`}>size</h1>

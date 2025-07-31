@@ -46,22 +46,26 @@ const NewArrivals = () => {
                 className="h-full w-full "
                 />
             </div>
-            <div className="p-4">
-                <div className="mb-2 flex items-center justify-between">
-                <p className="text-slate-800 text-md">
-                    
-                    {truncateString(products[item as keyof typeof products].name, 10)}
-                </p>
-                <p className="text-black text-md font-semibold">
-                    ₵{products[item as keyof typeof products].price}
-                </p>
-                </div>
-                    <a href={`/shop/${products[item as keyof typeof products].name.replace(/\s+/g, '').toLowerCase()}`}>
-                <button className="rounded-md w-full mt-6 bg-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
-                View Product
-                </button>
-                </a>
-            </div>
+<div className="p-4">
+    <div className="mb-2 flex items-center justify-between">
+        <p className="text-slate-800 text-md">
+            {truncateString(products[item as keyof typeof products].name, 10)}
+        </p>
+        <div className="flex items-center gap-2">
+            <p className="text-black text-md font-semibold line-through">
+                ₵{products[item as keyof typeof products].price}
+            </p>
+            <p className="text-red-600 text-md font-semibold">
+                ₵{products[item as keyof typeof products].discountedPrice}
+            </p>
+        </div>
+    </div>
+    <a href={`/shop/${products[item as keyof typeof products].name.replace(/\s+/g, '').toLowerCase()}`}>
+        <button className="rounded-md w-full mt-6 bg-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+            View Product
+        </button>
+    </a>
+</div>
         </li>
         
         ))

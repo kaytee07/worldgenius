@@ -22,6 +22,7 @@ interface ItemObject {
     id: number;
     name: string;
     price: number;
+    discountPrice: number;
     originalPrice: number;
     color: string;
     size: string;
@@ -75,9 +76,6 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
 
     useEffect(() => {
         setCart(data)
-       
-       
-
     }, [data])
 
     useEffect(() => {
@@ -127,10 +125,10 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
     
         const product = cartItems[itemIndex];
         product.quantity++;
-        product.price = product.originalPrice * product.quantity;
+        product.price = product.discountPrice * product.quantity;
     
         console.log(`Updated quantity: ${product.quantity}`);
-    
+        console.log(cartItems)
         updatedCart[itemKey].quantity = product.quantity;
         setCart(updatedCart);
     
@@ -154,7 +152,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
          const product = cartItems[itemIndex];
          if (product.quantity < 2) return;
          product.quantity--;
-         product.price = product.originalPrice * product.quantity;
+         product.price = product.discountPrice * product.quantity;
      
          console.log(`Updated quantity: ${product.quantity}`);
      
@@ -264,7 +262,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
                                             </div>
                                             <div className="info w-40 flex flex-col">
                                             <p>{items.name}</p>
-                                            <p className="font-bold">{items.price.toFixed(2)}</p>
+                                            <p className="font-bold">{items.price}</p>
                                             <div className="flex gap-6">
                                                 <p>
                                                     {items.color}
