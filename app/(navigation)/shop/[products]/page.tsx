@@ -65,37 +65,32 @@ const Products: React.FC<ProductProps> = ({params}) => {
 
  
 
-    function addToCart() {
-        const item = tempItem;
-        if (!item.size) return alert("select a size");
-        if (!item.color) return alert("select a color");
-        const itemKey = `${item.id}-${item.size}-${item.color}`; 
-        console.log(itemKey)
-        
-        const cart: Record<string, Item> = JSON.parse(localStorage.getItem('cart') || '{}');
-        
+function addToCart() {
+  const item = tempItem;
+  if (!item.size) return alert("select a size");
+  if (!item.color) return alert("select a color");
 
-        // Find the existing item index in the cart
-        
-        const existingItemIndex: boolean = cart[itemKey] && cart[itemKey].key === itemKey
-        console.log(itemKey)
-        // If item exists in the cart, update its quantity, else add it
-        
-        if (existingItemIndex) {
-            alert("item already in cart");
-            return    
-        } else {
-            item['img'] = Products.img;
-            item['key'] = itemKey;
-            cart[`${itemKey}`] = item;
-            // cart.push(item);
-        }
+  const itemKey = `${item.id}-${item.size}-${item.color}`;
+  const cart: Record<string, Item> = JSON.parse(localStorage.getItem("cart") || "{}");
 
-        // Save updated cart to localStorage in
-        localStorage.setItem('cart', JSON.stringify(cart));
-        console.log('Updated Cart:', cart);
-        window.location.reload()
-    }
+  const existingItem = cart[itemKey] && cart[itemKey].key === itemKey;
+  if (existingItem) {
+    alert("item already in cart");
+    return;
+  }
+
+  // ✅ Add necessary fields including discountedPrice
+  item.img = Products.img;
+  item.key = itemKey;
+  item.discountedPrice = Products.discountedPrice; // ✅ This line fixes the type error
+
+  cart[itemKey] = item;
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  console.log("Updated Cart:", cart);
+  window.location.reload();
+}
+
 
   
     useEffect(() => {
