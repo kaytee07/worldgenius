@@ -90,9 +90,8 @@ const Products: React.FC<ProductProps> = ({params}) => {
             // cart.push(item);
         }
 
-        // Save updated cart to localStorage
+        // Save updated cart to localStorage in
         localStorage.setItem('cart', JSON.stringify(cart));
-        console.log(JSON.parse(localStorage.getItem('cart')))
         console.log('Updated Cart:', cart);
         window.location.reload()
     }
