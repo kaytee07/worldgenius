@@ -537,32 +537,32 @@ export const products = {
         quantity: 7,
         otherImages: ["/img/topoftheworldblackandwhite.png"]
     },
-    blackholejersey: {
-        id: 0,
-        name: "BLACK HOLE JERSEY",
-        price: 250.00,
-        discountedPrice: 200.00,
-        img: "/img/worldjerseyfront.png",
-        sizes: [
-            {
-                name: "M",
-                quantity: 30
-            },
-            {
-                name: "L",
-                quantity: 55
-            },
-        ],
-        colors: [
-            {
-                name: "Cream",
-                code: "CEBA7C"
-            },
-        ],
-        quantity: 8,
-        delivery: teeandcap,
-        otherImages: ["/img/worldjerseyfront.png", "/img/worldjerseyback.png"]
-    },
+    // blackholejersey: {
+    //     id: 0,
+    //     name: "BLACK HOLE JERSEY",
+    //     price: 250.00,
+    //     discountedPrice: 200.00,
+    //     img: "/img/worldjerseyfront.png",
+    //     sizes: [
+    //         {
+    //             name: "M",
+    //             quantity: 30
+    //         },
+    //         {
+    //             name: "L",
+    //             quantity: 55
+    //         },
+    //     ],
+    //     colors: [
+    //         {
+    //             name: "Cream",
+    //             code: "CEBA7C"
+    //         },
+    //     ],
+    //     quantity: 8,
+    //     delivery: teeandcap,
+    //     otherImages: ["/img/worldjerseyfront.png", "/img/worldjerseyback.png"]
+    // },
     blackholeshirt: {
         id: 0,
         name: "BLACK HOLE SHIRT",
