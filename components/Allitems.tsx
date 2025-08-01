@@ -52,7 +52,7 @@ const Allitems = () => {
                         {truncateString(products[item as keyof typeof products].name, 8)}
                     </p>
                     <div className="flex items-center gap-2">
-                        {index === 4 || index === 45 ? (
+                        {index === 3 || index === 45 ? (
                             <span className="text-red-600 text-md font-semibold">Sold Out</span>
                         ) : (
                             <>
@@ -66,7 +66,7 @@ const Allitems = () => {
                         )}
                     </div>
                 </div>
-                {index === 4 || index === 45 ? (
+                {index === 3|| index === 45 ? (
                     <button
                         className="rounded-md w-full mt-6 bg-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-cyan-700 focus:shadow-none active:bg-cyan-700 hover:bg-cyan-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                         type="button"

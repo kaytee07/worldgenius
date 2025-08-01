@@ -32,7 +32,7 @@ const NewArrivals = () => {
     <div className="flex justify-center items-center flex-col mb-6">
     <div className='flex flex-col items-center'>
     <div className={`flex  py-6`}>
-        <h1 className='text-black text-4xl max-sm:text-start ml-5 font-semibold tracking-wide'>OUT OF THIS WORLD COLLECTION</h1>
+        <h1 className='text-black text-4xl max-sm:text-start ml-5 font-semibold tracking-wide'>TRUE SUMMER COLLECTION</h1>
     </div>
     <ul className='grid grid-cols-2 gap-4 max-sm:gap-[5px] sm:grid-cols-3 lg:grid-cols-4 w-[93vw]'>
     {
