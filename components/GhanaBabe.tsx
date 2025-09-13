@@ -82,11 +82,11 @@ const NewArrivals = () => {
                             <span className="text-red-600 text-md font-semibold">Sold Out</span>
                         ) : (
                             <>
-                                <span className="text-black text-md font-semibold line-through">
+                                {/* <span className="text-black text-md font-semibold line-through">
                                     ₵{products[item as keyof typeof products].price}
-                                </span>
+                                </span> */}
                                 <span className="text-red-600 text-md font-semibold">
-                                    ₵{products[item as keyof typeof products].discountedPrice}
+                                    ₵{products[item as keyof typeof products].price}
                                 </span>
                             </>
                         )}

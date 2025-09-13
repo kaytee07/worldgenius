@@ -105,7 +105,7 @@ const Products: React.FC<ProductProps> = ({params}) => {
       id: Products.id,
       name: Products.name,
       img: Products.img,
-      price: Products.discountedPrice,
+      price: Products.price,
       originalPrice: Products.price,
       discountedPrice: Products.discountedPrice, // ✅ CORRECT spelling
       color: Products.colors[0]?.name || '',     // ✅ safe access
@@ -135,7 +135,7 @@ const Products: React.FC<ProductProps> = ({params}) => {
         <div>
             <div className="name-price">
                 <h3 className={`text-md font-bold`}>{Products.name}</h3>
-                 <h2 className='py-3 text-red-500 font-bold text-lg'>Ghc {Products.discountedPrice}</h2>
+                 <h2 className='py-3 text-red-500 font-bold text-lg'>Ghc {Products.price}</h2>
             </div>
                       <div className="size-checkout">
                           <h1 className={`font-bold`}>size</h1>

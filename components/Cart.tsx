@@ -80,6 +80,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
 
     useEffect(() => {
         const itemsArray =  Object.keys(cart).map((key) => cart[key]);
+        console.log(itemsArray)
         setCartItems(itemsArray);
         
     }, [cart])
@@ -125,7 +126,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
     
         const product = cartItems[itemIndex];
         product.quantity++;
-        product.price = product.discountPrice * product.quantity;
+        product.price = product.originalPrice * product.quantity;
     
         console.log(`Updated quantity: ${product.quantity}`);
         console.log(cartItems)
@@ -152,7 +153,7 @@ export const SheetDemoCart: React.FC<SheetDemoCartProps> = ({ data }) => {
          const product = cartItems[itemIndex];
          if (product.quantity < 2) return;
          product.quantity--;
-         product.price = product.discountPrice * product.quantity;
+         product.price = product.originalPrice * product.quantity;
      
          console.log(`Updated quantity: ${product.quantity}`);
      

@@ -52,11 +52,11 @@ const NewArrivals = () => {
             {truncateString(products[item as keyof typeof products].name, 10)}
         </p>
         <div className="flex items-center gap-2">
-            <p className="text-black text-md font-semibold line-through">
+            {/* <p className="text-black text-md font-semibold line-through">
                 ₵{products[item as keyof typeof products].price}
-            </p>
+            </p> */}
             <p className="text-red-600 text-md font-semibold">
-                ₵{products[item as keyof typeof products].discountedPrice}
+                ₵{products[item as keyof typeof products].price}
             </p>
         </div>
     </div>
