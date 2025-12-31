@@ -123,6 +123,48 @@ export const bestSelling = {
         quantity: 7,
         otherImages: []
     },
+    boneshakerwhiteshirt: {
+        id: 0,
+        name: "BONE SHAKER WHITE SHIRT",
+        price: 220.00,
+        discountedPrice: 176.00,
+        img: "/img/boneshakerteeshirt.png",
+        sizes: [
+            {
+                name: "M",
+                quantity: 90
+            },
+            {
+                name: "L",
+                quantity: 30
+            },
+            {
+                name: "XL",
+                quantity: 55
+            },
+            {
+                name: "2XL",
+                quantity: 55
+            },
+            {
+                name: "3XL",
+                quantity: 55
+            },
+            {
+                name: "4XL",
+                quantity: 55
+            }
+        ],
+        colors: [
+            {
+                name: "Black",
+                code: "000000"
+            }
+        ],
+        quantity: 8,
+        delivery: teeandcap,
+        otherImages: ["/img/boneshakerteeshirt.png"]
+    },
     dndtruckercap:{
         id: 1,
         name: "DND TRUCKER CAP",
